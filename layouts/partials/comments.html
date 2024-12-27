@@ -1,0 +1,33 @@
+{{ if not .Site.IsServer }}
+<script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<div id="waline" class="waline-container"></div>
+
+<head>
+  <!-- ... -->
+  <link
+    rel="stylesheet"
+    href="/waline.css"
+  />
+  <!-- ... -->
+</head>
+<body>
+  <!-- ... -->
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from '/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://waline.graugris.icu/',
+    });
+  </script>
+</body>
+
+{{- end -}}
+
+{{- /* to add comments read => https://gohugo.io/content-management/comments/ */ -}}
+{{- /* Comments area end */ -}}
+
+
+
+ 

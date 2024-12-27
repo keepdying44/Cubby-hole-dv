@@ -1,0 +1,185 @@
+baseURL: "https://devilmatescry.keepdying44.icu" #绑定的域名 #if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: cubby-hole
+paginate: 5 # 首页每页显示的文章数
+theme: hugo-PaperMod # 主题名称，和themes文件夹下的一致
+defaultContentlanguage: zh
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDraft: false
+showDraft: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true # 允许使用 Emoji 表情
+pygmentsUseClasses: true
+# googleAnalytics: UA-123-45
+
+hasCJKLanguage: true # 自动检测是否包含中文日文韩文
+
+paginate: 5
+
+permalinks: #浏览器链接显示方式
+    post: /:slug/
+    page: /:slug/
+
+
+minify:
+    disableXML: true
+  # minifyOutput: true
+ 
+languages:
+    zh:
+        languageName: "Chinese"
+        weight: 1
+        taxonomies:
+          category: categories
+          tag: tags
+          series: series
+        profileMode:
+          enabled: true
+          title: DV联产仓储
+          subtitle: 以此纪念
+          imageURL: /img/avatar.gif
+          buttons:
+            - name: 漫画
+              url: /manga
+            - name: 图
+              url: /pic
+            - name: 文
+              url: /novel
+            - name: 视频
+              url: /vedio
+        menu:
+            main:
+              - name: Archives
+                url: archives
+                weight: 5
+              - name: About
+                url: about
+                weight: 8
+              - name: Search
+                url: search/
+                weight: 10
+              - name: Tags
+                url: tags
+                weight: 3
+                           
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON 
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    description: "DV联产仓储"
+    author:  
+    # author: ["Me", "You"] # multiple authors
+
+    footer:
+        since: 2024
+        customText: 2024
+
+    defaultTheme: auto
+    # disableThemeToggle: true
+    DateFormat: "2006-01-02"
+    ShowShareButtons: false
+    ShowWordCount: true
+  
+    Showdescription: true
+    # disableSpecial1stPost: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowToc: true
+    TocOpen: true
+    enableimgloop: true
+    # comments: false
+    images: ["favicon.png"]
+       
+
+    homeInfoParams:
+        Title: "DV联产仓储"
+        Content: >
+            以此纪念
+
+    socialIcons:
+        - name: weibo
+          url: https://weibo.com/u/7892489874
+        
+    comments: 
+      enabled: true
+      recordIP: false
+      emoji: "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"
+
+    
+
+    # label:
+    #     text: "Home"
+    #     icon: icon.png
+    #     iconHeight: 35
+
+    # analytics:
+    #     google:
+    #         SiteVerificationTag: "XYZabc"
+
+    assets:
+        disableHLJS: true
+        favicon: "/favicon.png"
+        favicon: "/favicon.png"
+        favicon16x16: "/favicon.png"
+        favicon32x32: "/favicon.png"
+        apple_touch_icon: "/favicon.png"
+        safari_pinned_tab: "/favicon.png"
+
+    # cover:
+    #     hidden: true # hide everywhere but not in structured data
+    #     hiddenInList: true # hide on list pages and home
+    #     hiddenInSingle: true # hide on single page
+
+    # fuseOpts:
+    #     isCaseSensitive: false
+    #     shouldSort: true
+    #     location: 0
+    #     distance: 1000
+    #     threshold: 0.4
+    #     minMatchCharLength: 0
+    #     keys: ["title", "permalink", "summary", "content"]
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        noClasses: false
+        # anchorLineNos: true
+        # codeFences: true
+        # guessSyntax: true
+        # lineNos: true
+        # style: monokai
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true

@@ -1,0 +1,41 @@
+
+<style>
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span>
+            {{- (.Date.Format (default "January 2, 2006" .Site.Params.DateFormat)) }}
+            &thinsp;·&ensp;
+        </span>
+    </span>
+
+    <span id="post_meta_style_3">
+        <span>
+            {{- .WordCount }}字
+            ·&ensp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span>
+            {{- if .Params.tags }}
+            <span class="post-tags-meta">
+                {{- range $index, $value := ($.GetTerms "tags") }}
+                {{- if eq $index 0}}
+                <a href="{{ .Permalink }}" style="color: var(--secondary)!important;font-size: 14px;">{{ .LinkTitle }}</a>
+                {{- else }}
+                <a href="{{ .Permalink }}" style="color: var(--secondary)!important;">{{ .LinkTitle }}</a>
+                {{- end }}
+                {{- end }}
+            </span>
+            {{- end }}
+        </span>
+    </span>
+</span>
+
+
