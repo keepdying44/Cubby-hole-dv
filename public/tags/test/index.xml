@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Test on cubby-hole</title>
+    <title>Test on cubbyhole-dv</title>
     <link>http://localhost:1313/tags/test/</link>
-    <description>Recent content in Test on cubby-hole</description>
+    <description>Recent content in Test on cubbyhole-dv</description>
     <image>
-      <title>cubby-hole</title>
+      <title>cubbyhole-dv</title>
       <url>http://localhost:1313/favicon.png</url>
       <link>http://localhost:1313/favicon.png</link>
     </image>
     <generator>Hugo -- 0.128.2</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 27 Dec 2024 19:30:52 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/test/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>http://localhost:1313/test/</link>
-      <pubDate>Fri, 27 Dec 2024 19:30:52 +0800</pubDate>
-      <guid>http://localhost:1313/test/</guid>
-      <description>随便试一下</description>
-    </item>
   </channel>
 </rss>

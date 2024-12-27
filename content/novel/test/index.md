@@ -1,28 +1,18 @@
 ---
 title: "尝试"
+description: "尝试一下能不能发文" # 文章描述，与搜索优化相关
 date: 2024-12-27 19:57:42
-author: ["44"]
+author: "44"
 categories: novel
 tags: test
-description: "尝试一下能不能发文" # 文章描述，与搜索优化相关
 summary: "随便写的" # 文章简单描述，会展示在主页
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: "test"
 cover:
-    image: "content/post/novel/test/002.png"
-    caption: "试试"
-    alt: ""
-    relative: false
-
+    image:
 
 comments: true
-showToc: true # 显示目录
-TocOpen: true # 自动展开目录
-autonumbering: false # 目录自动编号
-searchHidden: false # 该页面可以被搜索到
-showbreadcrumbs: true #顶部显示当前路径
-mermaid: true
-
+draft: false
 ---
 
 “你在干什么。”
