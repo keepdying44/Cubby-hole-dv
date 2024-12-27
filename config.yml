@@ -62,9 +62,7 @@ languages:
               - name: Tags
                 url: tags
                 weight: 3
-              - name: posts
-                url: posts
-                weight: 1
+                
                            
 
 outputs:

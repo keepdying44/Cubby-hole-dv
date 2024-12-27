@@ -9,7 +9,6 @@
       <link>http://localhost:1313/favicon.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Fri, 27 Dec 2024 19:57:42 +0000</lastBuildDate><atom:link href="http://localhost:1313/novel/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language><atom:link href="http://localhost:1313/novel/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
