@@ -1,5 +1,5 @@
 baseURL: "https://cubbyhole-dv.keepdying44.icu/" #绑定的域名 #if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-title: cubbyhole-dv
+title: CUBBYHOLE-DV
 paginate: 5 # 首页每页显示的文章数
 theme: hugo-PaperMod # 主题名称，和themes文件夹下的一致
 defaultContentlanguage: zh
@@ -7,7 +7,7 @@ enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDraft: true
 showDraft: false
-buildFuture: true
+buildFuture: false
 buildExpired: false
 enableEmoji: true # 允许使用 Emoji 表情
 pygmentsUseClasses: true
@@ -18,14 +18,14 @@ hasCJKLanguage: true # 自动检测是否包含中文日文韩文
 paginate: 5
 
 permalinks: #浏览器链接显示方式
-    post: /:slug/
+    post: /:year/:slug/
     page: /:slug/
 
 
 minify:
     disableXML: true
-  # minifyOutput: true
- 
+    # minifyOutput: true
+
 languages:
     zh:
         languageName: "Chinese"
@@ -40,12 +40,12 @@ languages:
           subtitle: 以此纪念
           imageURL: /avatar.gif
           buttons:
+            - name: 小说
+              url: /novels
+            - name: 插画
+              url: /pic
             - name: 漫画
               url: /manga
-            - name: 图
-              url: /pic
-            - name: 文
-              url: /novel
             - name: 视频
               url: /link
         menu:
@@ -59,17 +59,13 @@ languages:
               - name: Search
                 url: search/
                 weight: 10
-              - name: Tags
-                url: tags
-                weight: 3
-
                            
 
 outputs:
     home:
         - HTML
         - RSS
-        - JSON 
+        - JSON
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -98,7 +94,7 @@ params:
     TocOpen: true
     enableimgloop: true
     # comments: false
-    images: ["favicon.png"]
+    images: ["horn.png"]
        
 
     homeInfoParams:
@@ -107,17 +103,17 @@ params:
             以此纪念
 
     socialIcons:
-        - name: weibo
+        - name: Weibo
           url: https://weibo.com/u/7892489874
-        
+
     comments: 
       enabled: true
       recordIP: false
       emoji: "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"
 
-  
-    tags: []
-
+    
+    tag: []
+    
     # label:
     #     text: "Home"
     #     icon: icon.png

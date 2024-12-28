@@ -13,6 +13,15 @@
     margin-bottom: 5px;
 }
 
+.post-author {
+    font-size: 14px;      /* 字体大小 */
+    color: #555;          /* 字体颜色 */
+    margin-top: 20px;     /* 上外边距 */
+    text-align: right;    /* 右对齐 */
+    padding: 10px 0;      /* 内边距 */
+    border-top: 1px solid #eaeaea; /* 添加顶部边框 */
+}
+
 .post-meta,
 .breadcrumbs {
     color: var(--secondary);

@@ -2,6 +2,7 @@
 
 
 <article class="post-single">
+  
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title">
@@ -9,6 +10,9 @@
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
     {{- if .Description }}
+    <div class="post-author">
+      <p>作者: {{ .Params.author }}</p>
+    </div>
     <div class="post-description">
       {{ .Description }}
     </div>
@@ -55,6 +59,7 @@
   {{- partial "comments.html" . }}
   {{- end }}
 </article>
+
 
 
 {{- end }}{{/* end main */}}
