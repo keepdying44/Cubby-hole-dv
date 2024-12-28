@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>模板建设 on cubbyhole-dv</title>
+    <link>http://localhost:1313/tags/%E6%A8%A1%E6%9D%BF%E5%BB%BA%E8%AE%BE/</link>
+    <description>Recent content in 模板建设 on cubbyhole-dv</description>
+    <image>
+      <url>http://localhost:1313/favicon.png</url>
+      <link>http://localhost:1313/favicon.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 28 Dec 2024 11:25:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%A8%A1%E6%9D%BF%E5%BB%BA%E8%AE%BE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEST 文章&#43;模板搭建</title>
+      <link>http://localhost:1313/novel/2024/test1/</link>
+      <pubDate>Sat, 28 Dec 2024 11:25:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/novel/2024/test1/</guid>
+      <description>我被那Hugo打至跪地要带我回去做码奴隶啊！</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,9 +5,9 @@ theme: hugo-PaperMod # 主题名称，和themes文件夹下的一致
 defaultContentlanguage: zh
 enableInlineShortcodes: true
 enableRobotsTXT: true
-buildDraft: false
+buildDraft: true
 showDraft: false
-buildFuture: false
+buildFuture: true
 buildExpired: false
 enableEmoji: true # 允许使用 Emoji 表情
 pygmentsUseClasses: true
@@ -38,7 +38,7 @@ languages:
           enabled: true
           title: DV联产仓储
           subtitle: 以此纪念
-          imageURL: /avatar.png
+          imageURL: /avatar.gif
           buttons:
             - name: 漫画
               url: /manga
@@ -62,7 +62,7 @@ languages:
               - name: Tags
                 url: tags
                 weight: 3
-                
+
                            
 
 outputs:
@@ -115,7 +115,8 @@ params:
       recordIP: false
       emoji: "https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"
 
-    
+  
+    tags: []
 
     # label:
     #     text: "Home"
