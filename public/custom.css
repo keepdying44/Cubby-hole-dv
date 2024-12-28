@@ -1,17 +1,18 @@
 .center-image {
-    display: block;
-    margin: 0 auto;
-}
-
-figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
 }
 
-figure figcaption {
-    text-align: center;
-    font-size: 14px;
+.center-image img {
+    width: 50%; /* 可根据需要调整 */
+    height: auto;
+}
+
+.center-image figcaption {
+    margin-top: 10px;
     color: #666;
 }
