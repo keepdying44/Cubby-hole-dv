@@ -39,7 +39,7 @@ languages:
           enabled: true
           title: DV联产仓储
           subtitle: 以此纪念
-          imageURL: /avatar.gif
+          imageURL: /avatar.gif #头像
           buttons:
             - name: 小说
               url: /novels
@@ -95,7 +95,7 @@ params:
     TocOpen: true
     enableimgloop: true
     # comments: false
-    images: ["horn.png"]
+    images: ["/horn.png"]
        
 
     homeInfoParams:
@@ -126,12 +126,12 @@ params:
 
     assets:
         disableHLJS: true
-        favicon: "/favicon.png"
-        favicon: "/favicon.png"
-        favicon16x16: "/favicon.png"
-        favicon32x32: "/favicon.png"
-        apple_touch_icon: "/favicon.png"
-        safari_pinned_tab: "/favicon.png"
+        favicon: "/horn.png"
+        favicon: "/horn.png"
+        favicon16x16: "/horn.png"
+        favicon32x32: "/horn.png"
+        apple_touch_icon: "/horn.png"
+        safari_pinned_tab: "/horn.png"
 
     # cover:
     #     hidden: true # hide everywhere but not in structured data
