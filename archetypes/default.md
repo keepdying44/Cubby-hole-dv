@@ -10,4 +10,5 @@ slug: " " #标签页显示
 cover:
     image: 
 showToc: true
+hideMeta: false 
 ---

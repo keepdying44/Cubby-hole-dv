@@ -9,6 +9,11 @@
     margin: auto;
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     line-height: 24px;
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: var(--footer-height); /* 设置footer的高度，使内容垂直居中 */
+  
 }
 
 .footer span {

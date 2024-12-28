@@ -7,12 +7,12 @@ tags:
     - 2024
     - 霜夜颂曲私人企划
     - 小说
-layout: "single"
+  
 slug: "棕与绿的圣诞树" #标签页显示
 cover:
     image: 
 showToc: true
-
+hideMeta: false
 ---
 
 
