@@ -174,5 +174,4 @@ hideMeta: false
 
 他们还能一起度过的时间，总会慢慢超过他们曾经错过的那些时日。
 
-
- ![配图1](./8751735364351_.pic.jpg)
+{{< figure src="![tree](/Users/44-jp/cubbyhole-dv/static/novel/2024/1220/棕与绿的圣诞树/8751735364351_.pic.jpg)" title="Centered Image" alt="Description" >}}
