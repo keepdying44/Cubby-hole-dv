@@ -176,4 +176,4 @@ hideMeta: false
 
 
 
-{{< figure src="/images/2412201.jpg" title="圣诞树" alt="Description" class="center-image" >}}
+{{<figure src="2412201.jpg#center" caption="圣诞树" width="500px">}}

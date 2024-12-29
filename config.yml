@@ -95,17 +95,14 @@ params:
     TocOpen: true
     enableimgloop: true
     # comments: false
-    images: ["/horn.png"]
+    images: ["/favicon.png"]
        
 
     homeInfoParams:
         Title: "DV联产仓储"
         Content: >
-            以此纪念
+            " &quot; 以此纪念 &quot; "
 
-    socialIcons:
-        - name: Weibo
-          url: https://weibo.com/u/7892489874
 
     comments: 
       enabled: true

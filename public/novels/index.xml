@@ -5,8 +5,8 @@
     <link>http://localhost:1313/novels/</link>
     <description>Recent content in Novels on CUBBYHOLE-DV</description>
     <image>
-      <url>http://localhost:1313/horn.png</url>
-      <link>http://localhost:1313/horn.png</link>
+      <url>http://localhost:1313/favicon.png</url>
+      <link>http://localhost:1313/favicon.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>

@@ -1,18 +1,7 @@
-.center-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 20px auto;
-}
-
-.center-image img {
-    width: 50%; /* 可根据需要调整 */
-    height: auto;
-}
-
-.center-image figcaption {
-    margin-top: 10px;
-    color: #666;
+/* 控制 .post-content 中所有图片居中 */
+.post-content img {
+    display: block;
+    margin: 20px auto;  /* 上下 20px，左右自动居中 */
+    max-width: 50%;     /* 保证图片在屏幕上自适应 */
+    height: auto;        /* 保持图片纵横比 */
 }
