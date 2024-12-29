@@ -1,0 +1,1 @@
+md文件中图片引用：{{<figure src=" 此处为图片相对链接 #center" caption="标题" width="宽度">}}

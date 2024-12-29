@@ -26,7 +26,12 @@
 }
 
 .button {
-    background: var(--tertiary);
+    background: 
+        url('/images/textures/texture.png') repeat,  /* 纹理背景 */
+        rgba(59, 50, 50, 0.918);  /* 背景颜色，添加透明度 */
+        color: rgb(214, 214, 214);  /* 文字颜色 */
+        background-size: cover; /* 全覆盖 */
+border-radius: var(--radius);
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;
