@@ -2,29 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/pic/2024/241220/%F0%9D%93%95%F0%9D%93%BB%F0%9D%93%B8%F0%9D%93%BC%F0%9D%93%BD%F0%9D%93%B5%F0%9D%93%B2%F0%9D%93%BD%F0%9D%93%A2%F0%9D%93%AE%F0%9D%93%BB%F0%9D%93%AE%F0%9D%93%B7%F0%9D%93%AA%F0%9D%93%AD%F0%9D%93%AE/</loc>
-    <lastmod>2024-12-28T13:32:46+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/2024/</loc>
-    <lastmod>2024-12-28T13:32:46+00:00</lastmod>
+    <lastmod>2024-12-30T18:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-12-28T13:32:46+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/pic/</loc>
-    <lastmod>2024-12-28T13:32:46+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E6%8F%92%E7%94%BB/</loc>
-    <lastmod>2024-12-28T13:32:46+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E9%9C%9C%E5%A4%9C%E9%A2%82%E6%9B%B2%E7%A7%81%E4%BA%BA%E4%BC%81%E5%88%92/</loc>
-    <lastmod>2024-12-28T13:32:46+00:00</lastmod>
+    <lastmod>2024-12-30T18:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/novels/</loc>
-    <lastmod>2024-12-26T16:00:00+00:00</lastmod>
+    <lastmod>2024-12-30T18:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-12-30T18:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/%E9%9C%9C%E5%A4%9C%E9%A2%82%E6%9B%B2%E7%A7%81%E4%BA%BA%E4%BC%81%E5%88%92/</loc>
+    <lastmod>2024-12-30T18:30:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/novels/2024/241220/%E9%80%8F%E8%BF%87%E6%97%B6%E5%85%89%E7%9A%84%E6%97%A7%E5%BD%B1/</loc>
+    <lastmod>2024-12-30T18:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E5%B0%8F%E8%AF%B4/</loc>
-    <lastmod>2024-12-26T16:00:00+00:00</lastmod>
+    <lastmod>2024-12-30T18:30:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/novels/2024/241220/%E6%A3%95%E4%B8%8E%E7%BB%BF%E7%9A%84%E5%9C%A3%E8%AF%9E%E6%A0%91/</loc>
     <lastmod>2024-12-26T16:00:00+00:00</lastmod>
@@ -38,8 +35,6 @@
     <loc>http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8%E9%A2%84%E5%91%8A/</loc>
     <lastmod>2024-12-20T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
@@ -49,6 +44,8 @@
     <loc>http://localhost:1313/search/</loc>
   </url><url>
     <loc>http://localhost:1313/novel/</loc>
+  </url><url>
+    <loc>http://localhost:1313/photos/</loc>
   </url><url>
     <loc>http://localhost:1313/series/</loc>
   </url>

@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="gallery-photos page">
+  {{ range (sort (readDir "./static/photos") "Name" "desc")}}
+    {{ if ( .Name | findRE "(?i)\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)$") }}
+    <div class="gallery-photo">
+      <img class="photo-img" loading='lazy' decoding="async" src="/photos/{{ .Name }}" alt="{{ .Name }}" />
+      <span class="photo-title">{{ .Name | replaceRE "^[0-9 -]+(.*)[.].*" "$1"}}</span><span class="photo-time">{{ .Name | replaceRE "^([0-9-]+).*[.].*" "$1" }}</span>
+    </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+
+</style>
+<script src="/js/waterfall.min.js"></script>
+<script src="/js/imgStatus.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    imgStatus.watch('.photo-img', function(imgs) {
+      if(imgs.isDone()){
+        waterfall('.gallery-photos');
+        let pagePhoto = document.querySelectorAll('.gallery-photo');
+        for(var i=0;i < pagePhoto.length;i++){pagePhoto[i].className += " visible"};
+      }
+    });
+    window.addEventListener('resize', function () {
+      waterfall('.gallery-photos');
+    });
+});
+</script>
+<script src="/js/view-image.js"></script>
+<script src="/js/lately.min.js"></script>
+<script>
+  window.Lately && Lately.init({ target: '.photo-time'});
+  window.ViewImage && ViewImage.init('.gallery-photo img')
+</script>
+{{ end }}

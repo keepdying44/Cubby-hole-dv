@@ -38,9 +38,34 @@
         {{ .Site.Params.footer.since }} - 
     {{ end }}
     {{ now.Format "2006" }} <a href="https://cubbyhole-dv.keepdying44.icu/">Cubbyhole-DV</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
-  {{$var :=  $scratch.Get "total"}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共储存了{{$var}}k字·共 {{ $sections := slice "novels" "manga" "pic" }}
-  {{ len (where .Site.RegularPages "Section" "in" $sections) }}件创作</br><span><p></a></span>
-    {{- end }}
+  
+   <!-- 计算创作总量 -->
+   {{ $var := $scratch.Get "total" }}
+   {{ $var = div $var 100.0 }}
+   {{ $var = math.Ceil $var }}
+   {{ $var = div $var 10.0 }}
+   共储存了 {{ $var }}k字 · 
+
+   <!-- 统计创作件数 -->
+   {{ $sections := slice "novels" "manga" }}
+   {{ $contentCount := len (where .Site.RegularPages "Section" "in" $sections) }}
+
+   <!-- 统计相册图片数量 -->
+   {{ $imageFiles := readDir "./static/photos" }}
+   {{ $imageCount := 0 }}
+   {{ range $imageFiles }}
+       {{ if not .IsDir }}
+           {{ if ( .Name | findRE "(?i)\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)$") }}
+               {{ $imageCount = add $imageCount 1 }}
+           {{ end }}
+       {{ end }}
+   {{ end }}
+
+   <!-- 计算总件数 -->
+   {{ $totalCount := add $contentCount $imageCount }}
+   共 {{ $totalCount }} 件创作</br>
+   </span>
+   {{- end }}
 </footer>
 {{- end }}
 

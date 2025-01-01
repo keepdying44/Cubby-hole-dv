@@ -8,7 +8,7 @@ enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDraft: true
 showDraft: false
-buildFuture: false
+buildFuture: true
 buildExpired: false
 enableEmoji: true # 允许使用 Emoji 表情
 pygmentsUseClasses: true
@@ -44,7 +44,7 @@ languages:
             - name: 小说
               url: /novels
             - name: 插画
-              url: /pic
+              url: photos
             - name: 漫画
               url: /manga
             - name: 视频
@@ -60,6 +60,7 @@ languages:
               - name: Search
                 url: search/
                 weight: 10
+
                            
 
 outputs:
@@ -101,7 +102,8 @@ params:
     homeInfoParams:
         Title: "DV联产仓储"
         Content: >
-            " &quot; 以此纪念 &quot; "
+            以此纪念
+
 
 
     comments: 
