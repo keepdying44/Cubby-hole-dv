@@ -25,6 +25,7 @@ showToc: false
 
 【内容】质朴的每天保底掉落一顿饭活动
 
+【活动微博链接】[点击前往](http://m.weibo.cn/status/5117734299900857?)
 
 # 🍎
 
@@ -34,7 +35,6 @@ showToc: false
 
 我以DevilMayCry的名义邀请你们在雪夜中拜访，满足但丁无聊至极的新年愿望，他期待你们的到来。希望你们能让我弟弟费尽心思才在一楼搭起来的圣诞树显得没那么愚蠢。随信另附具体时间，我们不欢迎迟来之人。
 
-
-
-{{<figure src="宣图.webp#center" caption="霜夜颂曲宣图" width="500px">}}
+<br>
+{{<figure src="宣图.webp#center" caption="霜夜颂曲宣图" width="700px">}}
 
