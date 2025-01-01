@@ -1,0 +1,33 @@
+{{ define "main" }}
+<main class="main">
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+    {{ range (where .Site.RegularPages "Section" "events") }}
+    <article class="post-entry">
+        <div class="post-info">
+            <header class="entry-header">
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            </header>
+            <div class="entry-content">
+                {{ .Params.description }}
+            </div>
+            <footer class="entry-footer">
+                <div class="entry-meta">
+                    <span class="meta-item">
+                        <!--日期：-->{{ .Date.Format "2006-01-02" }}</span>
+                    {{ if .Params.tags }}
+                    <span class="meta-item">
+                        <!--标签 -->
+                        {{ range .Params.tags }}
+                        <span class="tag">{{ . }}</span>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </div>
+            </footer>
+        </div>
+    </article>
+    {{ end }}
+</main>
+{{ end }}

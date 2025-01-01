@@ -51,15 +51,19 @@ languages:
               url: /link
         menu:
             main:
+              - name: Events
+                url: /events
+                weight: 2
               - name: Archives
-                url: archives
-                weight: 5
+                url: archives/
+                weight: 3
               - name: About
-                url: about
-                weight: 8
+                url: about/
+                weight: 5
               - name: Search
                 url: search/
-                weight: 10
+                weight: 8
+            
 
                            
 
