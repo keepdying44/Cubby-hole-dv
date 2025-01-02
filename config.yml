@@ -51,16 +51,16 @@ languages:
               url: /link
         menu:
             main:
-              - name: Events
+              - name: 活动
                 url: /events
                 weight: 2
-              - name: Archives
+              - name: 归档
                 url: archives/
                 weight: 3
-              - name: About
+              - name: 关于
                 url: about/
                 weight: 5
-              - name: Search
+              - name: 搜索
                 url: search/
                 weight: 8
             
