@@ -20,13 +20,14 @@
         {{ .Site.Params.footer.since }} - 
     {{ end }}
     {{ now.Format "2006" }} <a href="https://cubbyhole-dv.keepdying44.icu/">CUBBYHOLE-DV</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
-  
+    
+
    <!-- 计算创作总量 -->
    {{ $var := $scratch.Get "total" }}
    {{ $var = div $var 100.0 }}
    {{ $var = math.Ceil $var }}
    {{ $var = div $var 10.0 }}
-   共储存了 {{ $var }}k字 · 
+   共归档{{ $var }}k字 · 
 
    <!-- 统计创作件数 -->
    {{ $sections := slice "novels" "manga" }}
@@ -42,6 +43,12 @@
            {{ end }}
        {{ end }}
    {{ end }}
+
+    <!-- 统计活动数量 -->
+    {{ $eventCount := len (where .Site.RegularPages "Section" "events") }}
+    {{ if gt $eventCount 0 }}
+        {{ $eventCount }} 次活动 · 
+    {{ end }}
 
    <!-- 计算总件数 -->
    {{ $totalCount := add $contentCount $imageCount }}
@@ -176,7 +183,7 @@
 
 
 <script>
-    var s1 = '2024-12-26';//设置为建站时间
+    var s1 = '2024-12-25';//设置为建站时间
     s1 = new Date(s1.replace(/-/g, "/"));
     s2 = new Date();
     var days = s2.getTime() - s1.getTime();
