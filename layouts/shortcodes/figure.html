@@ -7,11 +7,11 @@
     {{- end }}
 
     <!-- 图片链接用于灯箱 -->
-    <a data-fancybox="gallery" href="{{ .Get "src" }}{{- if eq (.Get "align") "center" }}#center{{- end }}" 
+    <a data-fancybox="gallery" href="{{ .Get "src" }}" 
        data-caption="{{ with .Get "caption" }}{{ . }}{{ end }}">
-        <img loading="lazy" src="{{ .Get "src" }}{{- if eq (.Get "align") "center" }}#center{{- end }}"
+        <img loading="lazy" src="{{ .Get "src" }}"
              {{- if or (.Get "alt") (.Get "caption") }}
-             alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
+             alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify | default "Image" }}{{ end }}"
              {{- end -}}
              {{- with .Get "width" }} width="{{ . }}"{{ end -}}
              {{- with .Get "height" }} height="{{ . }}"{{ end -}}

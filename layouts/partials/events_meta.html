@@ -1,0 +1,58 @@
+<style>
+    .parent-event-meta {
+        display: flex; /* 使用 Flexbox */
+        flex-wrap: nowrap; /* 强制元素在一行 */
+        align-items: center; /* 垂直居中 */
+        gap: 15px; /* 元素之间的间距 */
+        opacity: 0.8; /* 透明度 */
+        font-size: 14px; /* 字体大小 */
+        color: var(--secondary);
+    }
+
+    .parent-event-meta span,
+    .parent-event-meta ul {
+        display: inline-flex; /* 确保内容横向排列 */
+        align-items: center;
+        margin: 0; /* 去除可能的默认边距 */
+    }
+
+    .post-tags-meta {
+        display: inline-flex;
+        gap: 8px; /* 标签之间的间距 */
+    }
+
+    .post-tags-meta a {
+        text-decoration: none;
+        color: var(--secondary)!important;
+        font-size: 14px;
+    }
+
+    .post-tags-meta a:hover {
+        color: var(--primary)!important;
+        text-decoration: underline;
+    }
+</style>
+
+<div class="parent-event-meta">
+    <!-- 日期 -->
+    <span id="event_meta_style_1">
+        {{- (.Date.Format (default "January 2, 2006" .Site.Params.DateFormat)) }}
+    </span>
+
+
+    <!-- 作者 -->
+    <span id="event_meta_style_4">
+        {{- if .Params.author }}
+        作者: <a href="/author/{{ .Params.author | urlize }}" style="color: var(--secondary)!important;">{{ .Params.author }}</a>
+        {{- end }}
+    </span>
+
+    <!-- 标签 -->
+    {{ if .Params.tags }}
+    <ul class="post-tags-meta">
+        {{- range $index, $value := ($.GetTerms "tags") }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{- end }}
+    </ul>
+    {{ end }}
+</div>

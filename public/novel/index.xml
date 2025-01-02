@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Novels on CUBBYHOLE-DV</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1313/novel/</link>
     <description>Recent content in Novels on CUBBYHOLE-DV</description>
     <image>
       <url>http://localhost:1313/favicon.png</url>
@@ -10,7 +10,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 31 Dec 2024 01:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Dec 2024 01:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/novel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>八次维吉尔折断尾巴，最后一次他</title>
       <link>http://localhost:1313/novels/2024/241220/%E5%85%AB%E6%AC%A1%E7%BB%B4%E5%90%89%E5%B0%94%E6%8A%98%E6%96%AD%E5%B0%BE%E5%B7%B4%E6%9C%80%E5%90%8E%E4%B8%80%E6%AC%A1%E4%BB%96/</link>
@@ -81,44 +81,6 @@
       
       <guid>http://localhost:1313/novels/2024/241220/h.a.t.e.u/</guid>
       <description>平安夜快乐！属于现pa3dv的抓马故事（或许）灵感源于同名歌曲=Having A Typical Emotional Upset=典型的为感情心烦意乱，欢迎欣赏！</description>
-    </item>
-    
-    <item>
-      <title>霜夜颂曲私人企划</title>
-      <link>http://localhost:1313/events/2024/2024%E9%9C%9C%E5%A4%9C%E9%A2%82%E6%9B%B2%E9%A2%84%E5%91%8A/</link>
-      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/events/2024/2024%E9%9C%9C%E5%A4%9C%E9%A2%82%E6%9B%B2%E9%A2%84%E5%91%8A/</guid>
-      <description>活动信息 【时间】12.24-12.31 【策划】#风灵月隐# 【绘制】@其实问题不在于此 【宣图】@想不出可用id的咸鱼 【内容】质朴的每天保底掉落</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/about/</guid>
-      <description>about</description>
-    </item>
-    
-    
-    
-    <item>
-      <title>Novels</title>
-      <link>http://localhost:1313/novel/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/novel/</guid>
-      <description>novel</description>
-    </item>
-    
-    <item>
-      <title>Photos</title>
-      <link>http://localhost:1313/photos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/photos/</guid>
-      <description></description>
     </item>
     
   </channel>
