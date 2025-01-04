@@ -5,7 +5,7 @@ author: "长风" #作者
 description: "🎄✨MerryChristmas！⭐❄️" #描述
 tags: 
     - 2024
-    - 霜夜颂曲私人企划
+    - 霜夜颂曲
     - 小说
 slug: "一封信或一首圣诞诗歌" #标签页显示
 cover:

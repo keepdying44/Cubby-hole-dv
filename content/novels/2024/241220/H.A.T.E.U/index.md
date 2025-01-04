@@ -5,7 +5,7 @@ author: "隐" #作者
 description: "平安夜快乐！属于现pa3dv的抓马故事（或许）灵感源于同名歌曲=Having A Typical Emotional Upset=典型的为感情心烦意乱，欢迎欣赏！" #描述
 tags: 
     - 2024
-    - 霜夜颂曲私人企划
+    - 霜夜颂曲
     - 小说
 slug: "H.A.T.E.U" #标签页显示
 cover:

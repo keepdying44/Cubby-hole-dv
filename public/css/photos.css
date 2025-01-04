@@ -22,9 +22,18 @@
 
 /* 响应式设计：小屏幕 */
 @media screen and (max-width: 1024px) {
-	.gallery-photo {
-		grid-template-columns: repeat(3, 1fr);
+	.gallery-photos {
+		display: flex; /* 启用 Flexbox 布局 */
+		flex-wrap: wrap; /* 允许换行 */
+		gap: 10px; /* 子项之间的间隙 */
+		justify-content: space-around; /* 子项均匀分布 */
 	}
+
+	.gallery-photo {
+		flex: 1 1 calc(33.33% - 20px); /* 每行 3 列 */
+		margin: 5px; /* 添加子项之间的间距 */
+	}
+
 	.gallery-photo span.photo-title {
         font-size: 13px; /* 调整字体大小 */
         padding: 3px 5px; /* 调整内边距 */
@@ -33,10 +42,17 @@
   
   /* 响应式设计：手机屏幕 */
   @media (max-width: 768px) {
-	.gallery-photo {
-		grid-template-columns: repeat(2, 1fr);
+	.gallery-photos {
+		display: flex; /* 启用 Flexbox 布局 */
+		flex-wrap: wrap; /* 允许换行 */
+		gap: 10px; /* 子项之间的间隙 */
+		justify-content: space-between; /* 子项均匀分布 */
 	}
-  
+
+	.gallery-photo {
+		flex: 1 1 calc(50% - 20px); /* 每行 2 列 */
+		margin: 5px; /* 添加子项之间的间距 */
+	}
 	.gallery-photo span.photo-title{
         display: none;
     }
