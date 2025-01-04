@@ -130,13 +130,9 @@
 	  max-width: 100%; /* 每个项目最大宽度为100% */
 	}
   
-	.photo-time {
-	  display: none; /* 隐藏时间 */
-	}
 	.gallery-photo span.photo-title,
     .gallery-photo span.photo-time {
-        font-size: 8px; /* 调整字体大小 */
-        padding: 1px 3px; /* 调整内边距 */
+        display: none;
     }
 }
 
