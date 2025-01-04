@@ -17,7 +17,6 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    padding: 20px 0;
 }
 
 /* 照片容器 */
@@ -100,7 +99,7 @@
 /* 响应式设计：小屏幕 */
 @media screen and (max-width: 1280px) {
 	.gallery-photo {
-		width: calc(48% - 20px);
+		width: calc(33.33% - 20px);
 	}
 	.gallery-photo span.photo-title,
     .gallery-photo span.photo-time {
