@@ -1,7 +1,6 @@
 :root {
 	--tag-hover-bg: rgb(144, 169, 214);
 	--tag-active-bg: rgb(121, 177, 255);
-	--gallery-gap: 30px; /* 照片之间的间距 */
 	--radius: 7px; /* 全局圆角 */
 	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 全局阴影 */
 }
@@ -13,27 +12,65 @@
 
 /* 照片区域整体容器 */
 .gallery-photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
+	max-width: calc(var(--main-width)); /* 确保与 main 的宽度一致 */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gap);
+	margin: 0 auto; /* 居中对齐 */
+	padding: 0;
 }
+
+/* 响应式设计：小屏幕 */
+@media screen and (max-width: 1024px) {
+	.gallery-photo {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.gallery-photo span.photo-title {
+        font-size: 13px; /* 调整字体大小 */
+        padding: 3px 5px; /* 调整内边距 */
+    }
+  }
+  
+  /* 响应式设计：手机屏幕 */
+  @media (max-width: 768px) {
+	.gallery-photo {
+		grid-template-columns: repeat(2, 1fr);
+	}
+  
+	.gallery-photo span.photo-title{
+        display: none;
+    }
+}
+
 
 /* 照片容器 */
 .gallery-photo {
-    position: relative;
-    width: calc(33.33% - 20px);
+	overflow: hidden;
+	position: absolute;
+	width: 150px; /* 固定子项宽度 */
+    margin: 12px; /* 子项间距 */
 	border-radius: var(--radius);
-	margin: 7px;
-	gap: var(--gallery-gap);
-    box-sizing: border-box;
-	box-shadow: 0 4px 8px var(--tertiary); /* 添加阴影 */
+	box-shadow: 0 4px 8px var(--tertiary); 
 }
+
+/* 图片样式 */
+.gallery-photo img{
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: var(--radius); /* 图片圆角与容器一致 */
+	padding: 5px;
+	cursor: pointer;
+	transition: transform 0.4s ease-in-out, opacity 0.3s ease; /* 动画效果 */
+}
+
 
 .gallery-photo.visible{
 	visibility: visible;
 	animation: fadeIn 2s;
 }
+
 
 @keyframes fadeIn {
 	0% {
@@ -57,38 +94,19 @@
 }
 
 
-/* 图片样式 */
-.gallery-photo img{
-	display: block;
-	width:100%;
-	height: auto;
-	object-fit: cover;
-	border-radius: var(--radius); /* 图片圆角与容器一致 */
-	padding: 3px;
-	cursor: pointer;
-	transition: transform 0.4s ease-in-out, opacity 0.3s ease; /* 动画效果 */
-}
-
-/* 照片标题和时间的样式 */
-.gallery-photo span.photo-title,
-.gallery-photo span.photo-time{
+.gallery-photo span.photo-title{
 	position: absolute;
 	background: rgba(0, 0, 0, 0.3);
-	padding: 4px 6px;
+	padding: 3px 4px;
 	font-size: 14px;
 	color: #fff;
 	display: none;
 	animation: fadeIn 1s;
+	bottom: 5px;
+	left: 5px;
+	border-radius: var(--radius);
 }
 
-.gallery-photo span.photo-title{
-	position:absolute;
-	bottom:4px;
-	left:4px;
-}
-.gallery-photo span.photo-time{
-	display: none; 
-}
 
 /* 鼠标悬停时显示标题 */
 .gallery-photo:hover span.photo-title{
@@ -96,42 +114,7 @@
 }
 
 
-/* 响应式设计：小屏幕 */
-@media screen and (max-width: 1280px) {
-	.gallery-photo {
-		width: calc(33.33% - 20px);
-	}
-	.gallery-photo span.photo-title,
-    .gallery-photo span.photo-time {
-        font-size: 13px; /* 调整字体大小 */
-        padding: 3px 5px; /* 调整内边距 */
-    }
-  }
-  
-  /* 响应式设计：更小的屏幕 */
-  @media screen and (max-width: 860px) {
-	.gallery-photo {
-	    width: calc(48% - 20px); /* 每行 2 列 */
-	}
-	.gallery-photo span.photo-title,
-    .gallery-photo span.photo-time {
-        font-size: 10px; /* 调整字体大小 */
-        padding: 2px 4px; /* 调整内边距 */
-    }
-  }
-  
-  /* 响应式设计：手机屏幕 */
-  @media (max-width: 683px) {
-	.gallery-photo {
-		width: calc(48% - 20px); /* 每行 2 列 */
-	}
-  
-	.gallery-photo span.photo-title,
-    .gallery-photo span.photo-time {
-        font-size: 8px; /* 调整字体大小 */
-        padding: 1px 3px; /* 调整内边距 */
-    }
-}
+
 
 
 /* Tag 栏样式 */
@@ -139,7 +122,7 @@
 	display: flex; /* 使用 flexbox 布局 */
 	justify-content: center; /* 水平居中 */
 	gap: 10px; /* 按钮之间的间距 */
-	margin-top: 30px; /* 设置顶部的间距 */
+	margin-top: 20px; /* 设置顶部的间距 */
 	margin-bottom: 20px; /* 设置底部距离 */
 	flex-wrap: wrap; /* 小屏幕自动换行 */
 }
