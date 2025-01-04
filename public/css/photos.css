@@ -1,9 +1,8 @@
 :root {
 	--tag-hover-bg: rgb(144, 169, 214);
 	--tag-active-bg: rgb(121, 177, 255);
-	--tag-gap: 10px; /* 按钮和图片之间的间距 */
-	--gallery-gap: 10px; /* 照片之间的间距 */
-	--radius: 8px; /* 全局圆角 */
+	--gallery-gap: 30px; /* 照片之间的间距 */
+	--radius: 7px; /* 全局圆角 */
 	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 全局阴影 */
 }
 
@@ -13,28 +12,37 @@
 }
 
 /* 照片区域整体容器 */
-.gallery-photos{
-  display: flex;
-  flex-wrap: wrap; /* 自动换行 */
-  justify-content: center; /* 居中对齐 */
-  gap: var(--photo-gap); /* 照片间距 */
-  max-width: 1200px; /* 限制最大宽度 */
-  margin: 0 auto; /* 居中容器 */
-  padding: 20px; /* 上下内边距 */
+.gallery-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 20px 0;
 }
 
 /* 照片容器 */
-.gallery-photo{
-  	overflow: hidden; /* 防止内容溢出 */
-  	border-radius: var(--radius); /* 圆角 */
-  	position: relative;
-  	box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 悬停效果 */
+.gallery-photo {
+    position: relative;
+    width: calc(33.33% - 20px);
+	border-radius: var(--radius);
+	margin: 7px;
+	gap: var(--gallery-gap);
+    box-sizing: border-box;
+	box-shadow: 0 4px 8px var(--tertiary); /* 添加阴影 */
 }
 
 .gallery-photo.visible{
 	visibility: visible;
 	animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
 }
 
 /* 鼠标悬停的缩放和阴影变化 */
@@ -50,14 +58,7 @@
 }
 
 
-@keyframes fadeIn {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-}
+
 
 /* 图片样式 */
 .gallery-photo img{
@@ -66,7 +67,7 @@
 	height: auto;
 	object-fit: cover;
 	border-radius: var(--radius); /* 图片圆角与容器一致 */
-	padding: 2px;
+	padding: 3px;
 	cursor: pointer;
 	transition: transform 0.4s ease-in-out, opacity 0.3s ease; /* 动画效果 */
 }
@@ -99,25 +100,31 @@
 }
 
 
-
-/* 响应式设计 */
+/* 响应式设计：小屏幕 */
 @media screen and (max-width: 1280px) {
-	.gallery-photo{
-		flex: 1 1 calc(33.33% - var(--gallery-gap)); /* 每行 3 列 */
-    	max-width: calc(33.33% - var(--gallery-gap));
+	.gallery-photo {
+	  flex: 1 1 48%; /* 每行 2 列 */
+	  max-width: 48%; /* 每个项目最大宽度为48% */
+	}
   }
-}
-
-@media screen and (max-width: 860px) {
-	.gallery-photo{
-		flex: 1 1 calc(50% - var(--gallery-gap)); /* 每行 2 列 */
-    	max-width: calc(50% - var(--gallery-gap));
+  
+  /* 响应式设计：更小的屏幕 */
+  @media screen and (max-width: 860px) {
+	.gallery-photo {
+	  flex: 1 1 48%; /* 每行 2 列 */
+	  max-width: 48%; /* 每个项目最大宽度为48% */
+	}
   }
-}
-
-@media (max-width: 683px){
-	.photo-time{
-		display: none;
+  
+  /* 响应式设计：手机屏幕 */
+  @media (max-width: 683px) {
+	.gallery-photo {
+	  flex: 1 1 100%; /* 每行 1 列 */
+	  max-width: 100%; /* 每个项目最大宽度为100% */
+	}
+  
+	.photo-time {
+	  display: none; /* 隐藏时间 */
 	}
 }
 

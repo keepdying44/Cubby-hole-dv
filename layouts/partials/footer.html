@@ -33,16 +33,30 @@
    {{ $sections := slice "novels" "manga" }}
    {{ $contentCount := len (where .Site.RegularPages "Section" "in" $sections) }}
 
-   <!-- 统计相册图片数量 -->
-   {{ $imageFiles := readDir "./static/photos" }}
-   {{ $imageCount := 0 }}
-   {{ range $imageFiles }}
-       {{ if not .IsDir }}
-           {{ if ( .Name | findRE "(?i)\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)$") }}
-               {{ $imageCount = add $imageCount 1 }}
-           {{ end }}
-       {{ end }}
-   {{ end }}
+    <!-- 统计相册图片数量 -->
+    {{ $imageCount := 0 }}
+    
+   <!-- 统计 static/photos 及其子文件夹中的所有图片 -->
+    {{ $imageFiles := readDir "./static/photos" }}
+    {{ range $imageFiles }}
+        {{ if .IsDir }}
+        <!-- 如果是目录，则递归读取该目录 -->
+        {{ $subDirFiles := readDir (path.Join "./static/photos" .Name) }}
+        {{ range $subDirFiles }}
+            {{ if not .IsDir }}
+                {{ if .Name | findRE "(?i)\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)$" }}
+                    {{ $imageCount = add $imageCount 1 }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ else }}
+        <!-- 如果是图片文件 -->
+        {{ if .Name | findRE "(?i)\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)$" }}
+            {{ $imageCount = add $imageCount 1 }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
 
     <!-- 统计活动数量 -->
     {{ $eventCount := len (where .Site.RegularPages "Section" "events") }}
