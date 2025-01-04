@@ -81,6 +81,7 @@
 	display: none;
 	animation: fadeIn 1s;
 }
+
 .gallery-photo span.photo-title{
 	position:absolute;
 	bottom:4px;
@@ -99,13 +100,11 @@
 /* 响应式设计：小屏幕 */
 @media screen and (max-width: 1280px) {
 	.gallery-photo {
-	  flex: 1 1 48%; /* 每行 2 列 */
-	  max-width: 48%; /* 每个项目最大宽度为48% */
-	
+		width: calc(48% - 20px);
 	}
 	.gallery-photo span.photo-title,
     .gallery-photo span.photo-time {
-        font-size: 12px; /* 调整字体大小 */
+        font-size: 13px; /* 调整字体大小 */
         padding: 3px 5px; /* 调整内边距 */
     }
   }
@@ -113,25 +112,25 @@
   /* 响应式设计：更小的屏幕 */
   @media screen and (max-width: 860px) {
 	.gallery-photo {
-	  flex: 1 1 48%; /* 每行 2 列 */
-	  max-width: 48%; /* 每个项目最大宽度为48% */
+	    width: calc(48% - 20px); /* 每行 2 列 */
 	}
 	.gallery-photo span.photo-title,
     .gallery-photo span.photo-time {
-     	display: none;
+        font-size: 10px; /* 调整字体大小 */
+        padding: 2px 4px; /* 调整内边距 */
     }
   }
   
   /* 响应式设计：手机屏幕 */
   @media (max-width: 683px) {
 	.gallery-photo {
-	  flex: 1 1 100%; /* 每行 1 列 */
-	  max-width: 100%; /* 每个项目最大宽度为100% */
+		width: calc(48% - 20px); /* 每行 2 列 */
 	}
-
+  
 	.gallery-photo span.photo-title,
     .gallery-photo span.photo-time {
-        display: none;
+        font-size: 8px; /* 调整字体大小 */
+        padding: 1px 3px; /* 调整内边距 */
     }
 }
 
