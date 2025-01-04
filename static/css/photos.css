@@ -1,0 +1,155 @@
+:root {
+	--tag-hover-bg: rgb(144, 169, 214);
+	--tag-active-bg: rgb(121, 177, 255);
+	--tag-gap: 10px; /* 按钮和图片之间的间距 */
+	--gallery-gap: 10px; /* 照片之间的间距 */
+	--radius: 8px; /* 全局圆角 */
+	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 全局阴影 */
+}
+
+.dark {
+	--tag-hover-bg: rgb(110, 46, 46);
+	--tag-active-bg: rgb(173, 48, 48);
+}
+
+/* 照片区域整体容器 */
+.gallery-photos{
+  display: flex;
+  flex-wrap: wrap; /* 自动换行 */
+  justify-content: center; /* 居中对齐 */
+  gap: var(--photo-gap); /* 照片间距 */
+  max-width: 1200px; /* 限制最大宽度 */
+  margin: 0 auto; /* 居中容器 */
+  padding: 20px; /* 上下内边距 */
+}
+
+/* 照片容器 */
+.gallery-photo{
+  	overflow: hidden; /* 防止内容溢出 */
+  	border-radius: var(--radius); /* 圆角 */
+  	position: relative;
+  	box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 悬停效果 */
+}
+
+.gallery-photo.visible{
+	visibility: visible;
+	animation: fadeIn 2s;
+}
+
+/* 鼠标悬停的缩放和阴影变化 */
+.gallery-photo:hover {
+	transform: translateY(-4px); /* 悬浮时微微向上 */
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+}
+  
+/* 鼠标悬停时图片缩放 */
+.gallery-photo:hover img {
+	transform: scale(1.05); /* 微缩放效果 */
+	opacity: 0.95; /* 增强图片清晰度 */
+}
+
+
+@keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+}
+
+/* 图片样式 */
+.gallery-photo img{
+	display: block;
+	width:100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: var(--radius); /* 图片圆角与容器一致 */
+	padding: 2px;
+	cursor: pointer;
+	transition: transform 0.4s ease-in-out, opacity 0.3s ease; /* 动画效果 */
+}
+
+/* 照片标题和时间的样式 */
+.gallery-photo span.photo-title,
+.gallery-photo span.photo-time{
+	background: rgba(0, 0, 0, 0.3);
+	padding: 4px 8px;
+	font-size:0.9rem;
+	color: #fff;
+	display:none;
+	animation: fadeIn 1s;
+}
+.gallery-photo span.photo-title{
+	position:absolute;
+	bottom:4px;
+	left:4px;
+}
+.gallery-photo span.photo-time{
+	position:absolute;
+	top:4px;
+	left:4px;
+	font-size:0.8rem;
+}
+
+/* 鼠标悬停时显示标题 */
+.gallery-photo:hover span.photo-title{
+	display:block;
+}
+
+
+
+/* 响应式设计 */
+@media screen and (max-width: 1280px) {
+	.gallery-photo{
+		flex: 1 1 calc(33.33% - var(--gallery-gap)); /* 每行 3 列 */
+    	max-width: calc(33.33% - var(--gallery-gap));
+  }
+}
+
+@media screen and (max-width: 860px) {
+	.gallery-photo{
+		flex: 1 1 calc(50% - var(--gallery-gap)); /* 每行 2 列 */
+    	max-width: calc(50% - var(--gallery-gap));
+  }
+}
+
+@media (max-width: 683px){
+	.photo-time{
+		display: none;
+	}
+}
+
+
+/* Tag 栏样式 */
+.tag-list {
+	display: flex; /* 使用 flexbox 布局 */
+	justify-content: center; /* 水平居中 */
+	gap: 10px; /* 按钮之间的间距 */
+	margin-top: 30px; /* 设置顶部的间距 */
+	margin-bottom: 20px; /* 设置底部距离 */
+	flex-wrap: wrap; /* 小屏幕自动换行 */
+}
+
+.tag-filter {
+  padding: 5px 10px;
+  margin: 3px;
+  border: 2px solid var(--border-color);
+  background-color: var( --tertiary);
+  color: var( --content);
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.tag-filter:hover {
+	background-color: var( --tag-hover-bg);
+	transform: translateY(-2px);
+  	box-shadow: var(--shadow);
+}
+
+.tag-filter.active {
+  background-color: var(--tag-active-bg)
+}

@@ -1,0 +1,62 @@
+photos:
+#displayName: " "
+#name: " "
+#folder: " "
+#tags: 
+
+#霜夜颂曲私人企划
+  - displayName: "霜夜颂曲-平安夜"
+    folder: "霜夜颂曲"
+    name: "sysq1224.webp"
+    tags: ["2024", "霜夜颂曲"]
+  
+  - displayName: "霜夜颂曲"
+    name: "sysq1225.webp"
+    folder: "霜夜颂曲"
+    tags: ["2024", "霜夜颂曲"]
+  
+  - displayName: "霜夜颂曲-节礼日"
+    name: "sysq1226.webp"
+    folder: "霜夜颂曲"
+    tags: ["2024", "霜夜颂曲"]
+  
+  - displayName: "霜夜颂曲-gift"
+    name: "sysq1227.webp"
+    folder: "霜夜颂曲"
+    tags: ["2024", "霜夜颂曲"]
+  
+  - displayName: "霜夜颂曲-H.A.T.E.U"
+    name: "sysq1228.webp"
+    folder: "霜夜颂曲"
+    tags: ["2024", "霜夜颂曲"]
+  
+  - displayName: "霜夜颂曲-片段"
+    name: "sysq1229.webp"
+    folder: "霜夜颂曲"
+    tags: ["2024", "霜夜颂曲"]
+  
+  - displayName: "霜夜颂曲-雪景球"
+    name: "sysq1230.webp"
+    folder: "霜夜颂曲"
+    tags: ["2024", "霜夜颂曲"]
+  
+  - displayName: "霜夜颂曲-猫的出逃计划"
+    name: "sysq1231.webp"
+    folder: "霜夜颂曲"
+    tags: ["2024", "霜夜颂曲"]
+
+#圣诞不要剩蛋一个
+  #1227
+  - displayName: "剩蛋1227 2:00"
+    name: "sd1227-1.webp"
+    folder: "剩蛋"
+    tags: ["2024", "剩蛋"]
+
+  #1228
+  - displayName: "剩蛋1228 1:00"
+    name: "sd1228-2.webp"
+    folder: "剩蛋"
+    tags: ["2024", "剩蛋"]
+
+
+  

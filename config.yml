@@ -47,7 +47,7 @@ languages:
               url: photos
             - name: 漫画
               url: /manga
-            - name: 视频
+            - name: 外链
               url: /link
         menu:
             main:

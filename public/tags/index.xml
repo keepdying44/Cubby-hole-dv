@@ -39,11 +39,20 @@
     </item>
     
     <item>
-      <title>活动预告</title>
-      <link>http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8%E9%A2%84%E5%91%8A/</link>
-      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      <title>DV圣诞节之不要剩蛋一个</title>
+      <link>http://localhost:1313/tags/dv%E5%9C%A3%E8%AF%9E%E8%8A%82%E4%B9%8B%E4%B8%8D%E8%A6%81%E5%89%A9%E8%9B%8B%E4%B8%80%E4%B8%AA/</link>
+      <pubDate>Thu, 26 Dec 2024 07:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8%E9%A2%84%E5%91%8A/</guid>
+      <guid>http://localhost:1313/tags/dv%E5%9C%A3%E8%AF%9E%E8%8A%82%E4%B9%8B%E4%B8%8D%E8%A6%81%E5%89%A9%E8%9B%8B%E4%B8%80%E4%B8%AA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>活动</title>
+      <link>http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8/</link>
+      <pubDate>Sun, 22 Dec 2024 20:05:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,25 @@
+<div style="display: flex; 
+    align-items: center; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 10px; 
+    max-width: 150px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <img src="/images/weibo-logo.png" 
+    alt="Weibo Logo"
+    class="theme-icon" 
+    style="width: 30px; 
+          height: 30px; 
+          border-radius: 50%; 
+          margin-right: 10px;">
+  <div>
+    <a href="{{ .Get "url" }}" target="_blank" 
+      style="text-decoration: none; 
+            font-size: 16px; 
+            font-weight: bold; 
+            color: (--content);">
+      {{ .Inner | default "访问我的微博" }}
+    </a>
+    <p style="margin: 0; font-size: 14px; color: #666;"></p>
+  </div>
+</div>

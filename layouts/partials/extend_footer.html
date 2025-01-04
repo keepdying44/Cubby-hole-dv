@@ -4,10 +4,13 @@
 
 <!-- 给图片添加Fancybox灯箱 -->
 {{ if not .Page.IsHome }}
-{{ $script := resources.Get "js/fancybox.umd.min.js"}}
-<script src={{ $script.Permalink }}></script>
 
-{{ $styles := resources.Get "css/fancybox.min.css"}}
+<!-- 加载 Fancybox 的 JS -->
+{{ $script := resources.Get "js/fancybox.umd.min.js"}}
+<script src="{{ $script.Permalink }}"></script>
+
+<!-- 加载 Fancybox 的 CSS -->
+{{ $styles := resources.Get "css/extended/fancybox.min.css"}}
 <link rel="stylesheet" href="{{ $styles.Permalink }}">
 
 <script>

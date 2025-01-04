@@ -1,37 +1,114 @@
 {{ define "main" }}
-<div class="gallery-photos page">
-  {{ range (sort (readDir "./static/photos") "Name" "desc")}}
-    {{ if ( .Name | findRE "(?i)\\.(gif|jpg|jpeg|tiff|png|bmp|webp|avif|jxl)$") }}
-    <div class="gallery-photo">
-      <img class="photo-img" loading='lazy' decoding="async" src="/photos/{{ .Name }}" alt="{{ .Name }}" />
-      <span class="photo-title">{{ .Name | replaceRE "^[0-9 -]+(.*)[.].*" "$1"}}</span><span class="photo-time">{{ .Name | replaceRE "^([0-9-]+).*[.].*" "$1" }}</span>
+<main>
+  <header>
+    <h1>{{ .Title }}</h1>
+  </header>
+
+  <!-- 标签按钮列表 -->
+  <div class="tag-list">
+    <button class="tag-filter" data-tag="all">All
+    </button>
+
+    <!-- 动态生成 Tag 列表 -->
+    {{ $tags := slice }}
+    {{ $photos := .Site.Data.photos.photos }}
+    {{ range $photo := $photos }}
+      {{ $tags = $tags | append $photo.tags }}
+    {{ end }}
+    {{ range $tag := $tags | uniq }}
+    <button class="tag-filter" data-tag="{{ $tag }}">{{ $tag }}</button>
+    {{ end }}
+  </div>
+
+  <!-- 照片展示区域 -->
+  <div class="gallery-photos page">
+    {{ range $photo := $photos }}
+    <div class="gallery-photo" data-tags="
+      {{- range $index, $tag := $photo.tags -}}
+      {{- if $index }} {{ end }}{{ $tag }}
+      {{- end -}}
+    ">
+      <!-- 添加 Fancybox 的 <a> 包裹 -->
+      <a href="/photos/{{ $photo.folder }}/{{ $photo.name }}" data-fancybox="gallery" data-caption="{{ $photo.displayName }}">
+        <img class="photo-img" loading="lazy" decoding="async" src="/photos/{{ $photo.folder }}/{{ $photo.name }}" alt="{{ $photo.name }}" />
+      </a>
+      <span class="photo-title">
+        {{ if $photo.displayName }}
+          {{ $photo.displayName }}
+        {{ else }}
+          {{ $photo.name }}
+        {{ end }}
+      </span>
     </div>
     {{ end }}
-  {{ end }}
-</div>
+  </div>
+</main>
 
-
-</style>
-<script src="/js/waterfall.min.js"></script>
-<script src="/js/imgStatus.min.js"></script>
+<!-- 添加脚本 -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.tag-filter');
+    const photos = document.querySelectorAll('.gallery-photo');
+    let layoutTimeout;
+  
+    // 照片加载完成后触发瀑布流布局
     imgStatus.watch('.photo-img', function(imgs) {
-      if(imgs.isDone()){
+      if (imgs.isDone()) {
         waterfall('.gallery-photos');
-        let pagePhoto = document.querySelectorAll('.gallery-photo');
-        for(var i=0;i < pagePhoto.length;i++){pagePhoto[i].className += " visible"};
+        document.querySelectorAll('.gallery-photo').forEach(photo => {
+          photo.classList.add("visible");
+        });
       }
     });
-    window.addEventListener('resize', function () {
-      waterfall('.gallery-photos');
+  
+    // 监听标签按钮点击事件
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const selectedTag = button.getAttribute('data-tag');
+  
+        // 切换按钮样式
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+  
+        // 过滤照片
+        photos.forEach(photo => {
+          const tags = photo.getAttribute('data-tags').split(' ');
+          if (selectedTag === 'all' || tags.includes(selectedTag)) {
+            photo.style.display = 'block';
+          } else {
+            photo.style.display = 'none';
+          }
+        });
+  
+        clearTimeout(layoutTimeout);
+        layoutTimeout = setTimeout(() => {
+          waterfall('.gallery-photos');
+        }, 100);
+      });
     });
+  
+    // 默认触发 "全部" 按钮
+    const allButton = document.querySelector('.tag-filter[data-tag="all"]');
+    if (allButton) allButton.click();
+  });
+  </script>
+
+  <!-- 使用 Hugo Pipes 加载 Fancybox 的 JS 文件 -->
+{{ $fancyboxJS := resources.Get "js/fancybox.umd.min.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $fancyboxJS.Permalink }}"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  Fancybox.bind("[data-fancybox='gallery']", {
+    infinite: true,
+    Thumbs: {
+      autoStart: true,
+    },
+    caption: function (fancybox, carousel, slide) {
+      return slide.$trigger.dataset.caption || "";
+    }
+  });
 });
 </script>
-<script src="/js/view-image.js"></script>
-<script src="/js/lately.min.js"></script>
-<script>
-  window.Lately && Lately.init({ target: '.photo-time'});
-  window.ViewImage && ViewImage.init('.gallery-photo img')
-</script>
 {{ end }}
+

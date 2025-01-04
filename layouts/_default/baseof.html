@@ -3,22 +3,38 @@
 
 <head>
     {{- partial "head.html" . }}
-    <link rel="stylesheet" href="/custom.css">
+     <!-- 新增相册样式 -->
+    <link rel="stylesheet" href="/css/photos.css">
 </head>
 
 <body class="
-{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
-{{- print "list" -}}
-{{- end -}}
-{{- if eq site.Params.defaultTheme `dark` -}}
-{{- print " dark" }}
-{{- end -}}
-" id="top">
+    {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+    {{- print "list" -}}
+    {{- end -}}
+    {{- if eq site.Params.defaultTheme `dark` -}}
+    {{- print " dark" }}
+    {{- end -}}
+    " id="top">
     {{- partialCached "header.html" . .Page -}}
+    
     <main class="main">
         {{- block "main" . }}{{ end }}
     </main>
+
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+
+    <!-- 加载全局脚本 -->
+    <script src="/js/waterfall.min.js"></script>
+    <script src="/js/imgStatus.min.js"></script>
+    <script src="/js/view-image.js"></script>
+    <script src="/js/lately.min.js"></script>
+
+     <!-- 页面内容 -->
+
+    <!-- 使用 Hugo Pipes 加载 Fancybox 的 JS 文件 -->
+    {{ $fancyboxJS := resources.Get "js/fancybox.umd.min.js" | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $fancyboxJS.Permalink }}"></script>
+    
 </body>
 
 </html>
