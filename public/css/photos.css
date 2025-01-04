@@ -118,8 +118,7 @@
 	}
 	.gallery-photo span.photo-title,
     .gallery-photo span.photo-time {
-        font-size: 10px; /* 调整字体大小 */
-        padding: 2px 4px; /* 调整内边距 */
+     	display: none;
     }
   }
   
@@ -129,7 +128,7 @@
 	  flex: 1 1 100%; /* 每行 1 列 */
 	  max-width: 100%; /* 每个项目最大宽度为100% */
 	}
-  
+
 	.gallery-photo span.photo-title,
     .gallery-photo span.photo-time {
         display: none;
