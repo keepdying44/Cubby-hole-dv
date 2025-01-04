@@ -58,8 +58,6 @@
 }
 
 
-
-
 /* 图片样式 */
 .gallery-photo img{
 	display: block;
@@ -75,11 +73,12 @@
 /* 照片标题和时间的样式 */
 .gallery-photo span.photo-title,
 .gallery-photo span.photo-time{
+	position: absolute;
 	background: rgba(0, 0, 0, 0.3);
-	padding: 4px 8px;
-	font-size:0.9rem;
+	padding: 4px 6px;
+	font-size: 14px;
 	color: #fff;
-	display:none;
+	display: none;
 	animation: fadeIn 1s;
 }
 .gallery-photo span.photo-title{
@@ -88,10 +87,7 @@
 	left:4px;
 }
 .gallery-photo span.photo-time{
-	position:absolute;
-	top:4px;
-	left:4px;
-	font-size:0.8rem;
+	display: none; 
 }
 
 /* 鼠标悬停时显示标题 */
@@ -105,7 +101,13 @@
 	.gallery-photo {
 	  flex: 1 1 48%; /* 每行 2 列 */
 	  max-width: 48%; /* 每个项目最大宽度为48% */
+	
 	}
+	.gallery-photo span.photo-title,
+    .gallery-photo span.photo-time {
+        font-size: 12px; /* 调整字体大小 */
+        padding: 3px 5px; /* 调整内边距 */
+    }
   }
   
   /* 响应式设计：更小的屏幕 */
@@ -114,6 +116,11 @@
 	  flex: 1 1 48%; /* 每行 2 列 */
 	  max-width: 48%; /* 每个项目最大宽度为48% */
 	}
+	.gallery-photo span.photo-title,
+    .gallery-photo span.photo-time {
+        font-size: 10px; /* 调整字体大小 */
+        padding: 2px 4px; /* 调整内边距 */
+    }
   }
   
   /* 响应式设计：手机屏幕 */
@@ -126,6 +133,11 @@
 	.photo-time {
 	  display: none; /* 隐藏时间 */
 	}
+	.gallery-photo span.photo-title,
+    .gallery-photo span.photo-time {
+        font-size: 8px; /* 调整字体大小 */
+        padding: 1px 3px; /* 调整内边距 */
+    }
 }
 
 
