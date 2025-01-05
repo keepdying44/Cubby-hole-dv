@@ -1,61 +1,34 @@
 :root {
-	--tag-hover-bg: rgb(144, 169, 214);
-	--tag-active-bg: rgb(121, 177, 255);
+	--tag-bg: rgb(110, 46, 46);
 	--radius: 7px; /* 全局圆角 */
 	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 全局阴影 */
 }
 
 .dark {
-	--tag-hover-bg: rgb(110, 46, 46);
-	--tag-active-bg: rgb(173, 48, 48);
+	--tag-bg:rgb(144, 169, 214);
+	--shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 
 /* 照片区域整体容器 */
-.gallery-photos {
-	max-width: calc(var(--main-width)); /* 确保与 main 的宽度一致 */
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: var(--gap);
-	margin: 0 auto; /* 居中对齐 */
-	padding: 0;
-}
-
-/* 响应式设计：小屏幕 */
-@media screen and (max-width: 1024px) {
-	.gallery-photo span.photo-title {
-        font-size: 13px; /* 调整字体大小 */
-        padding: 3px 5px; /* 调整内边距 */
-    }
-  }
-  
-  /* 响应式设计：手机屏幕 */
-  @media (max-width: 768px) {
-	.gallery-photo span.photo-title{
-        display: none;
-    }
-}
+.gallery-photos{width:100%;}
 
 
 /* 照片容器 */
-.gallery-photo {
+.gallery-photo{
+	width:24.9%;
+	position: relative;
+	visibility: hidden;
 	overflow: hidden;
-	position: absolute;
-	width: 150px; /* 固定子项宽度 */
-    margin: 12px; /* 子项间距 */
-	border-radius: var(--radius);
-	box-shadow: 0 4px 8px var(--tertiary); 
+	box-shadow: var(--shadow)
 }
 
 /* 图片样式 */
 .gallery-photo img{
 	display: block;
 	width: 100%;
-	height: auto;
-	object-fit: cover;
-	border-radius: var(--radius); /* 图片圆角与容器一致 */
 	padding: 5px;
 	cursor: pointer;
-	transition: transform 0.4s ease-in-out, opacity 0.3s ease; /* 动画效果 */
+	transition: all .4s ease-in-out;/* 动画效果 */
 }
 
 
@@ -64,15 +37,6 @@
 	animation: fadeIn 2s;
 }
 
-
-@keyframes fadeIn {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
-}
 
 /* 鼠标悬停的缩放和阴影变化 */
 .gallery-photo:hover {
@@ -106,7 +70,19 @@
 	display:block;
 }
 
-
+@media screen and (max-width: 1280px) {
+	.gallery-photo{width:33.3%;}
+}
+@media screen and (max-width: 860px) {
+	.gallery-photo{width:49.9%;}
+}
+@media (max-width: 683px){
+	.photo-title{display: none;}
+}
+@keyframes fadeIn{
+	0% {opacity: 0;}
+   100% {opacity: 1;}
+}
 
 
 
@@ -124,20 +100,25 @@
   padding: 5px 10px;
   margin: 3px;
   border: 2px solid var(--border-color);
-  background-color: var( --tertiary);
-  color: var( --content);
+  background: url('/images/textures/texture.png') repeat, var( --secondary);
+  background-size: cover;
+  color: var( --tertiary);
   cursor: pointer;
   border-radius: var(--radius);
   font-size: 15px;
   transition: background-color 0.3s ease;
 }
 
+
 .tag-filter:hover {
-	background-color: var( --tag-hover-bg);
+	background-color: var( --tag-bg);
 	transform: translateY(-2px);
   	box-shadow: var(--shadow);
 }
 
 .tag-filter.active {
-  background-color: var(--tag-active-bg)
+	transform: translateY(-2px);
+	box-shadow: var(--shadow);
+	background-color: var(--tag-bg)
+	
 }

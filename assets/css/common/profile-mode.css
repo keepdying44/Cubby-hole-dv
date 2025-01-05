@@ -26,19 +26,21 @@
 }
 
 .button {
-    background: 
-        url('/images/textures/texture.png') repeat,  /* 纹理背景 */
-        var( --secondary);  /* 背景颜色，添加透明度 */
-        color: var(--tertiary);  /* 文字颜色 */
-        font-weight: bold;
-        background-size: cover; /* 全覆盖 */
-border-radius: var(--radius);
+    background: url('/images/textures/texture.png') repeat,  /* 纹理背景 */var( --secondary);  /* 背景颜色，添加透明度 */
+    color: var(--tertiary);  /* 文字颜色 */
+    font-weight: bold;
+    background-size: cover; /* 全覆盖 */
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;
-    transition: transform 0.1s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.button:hover {
+	transform: translateY(-2px);
+
+
+}
 .button-inner {
     padding: 0 8px;
 }
