@@ -16,12 +16,15 @@
         </span>
     </span>
     
+    
     <!--字数-->
     <span id="post_meta_style_3">
+        {{ if .Params.showWordCount }} 
         <span>
             {{- .WordCount }}字
             &ensp;
         </span>
+        {{ end }}
     </span>
 
     <!--作者-->

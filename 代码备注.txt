@@ -1,1 +1,5 @@
-md文件中图片引用：{{<figure src=" 此处为图片相对链接 #center" caption="标题" width="宽度">}}
+md文件中图片引用：
+{{<figure src=" 此处为图片相对链接 #center" caption="标题" width="宽度">}}
+
+md文件中微博卡片引用：
+{{% weibo-card url=" " %}}原博链接{{% /weibo-card %}}

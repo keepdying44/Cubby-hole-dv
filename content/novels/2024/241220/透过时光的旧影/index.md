@@ -14,11 +14,9 @@ cover:
     image: 
 showToc: true
 hideMeta: false 
+showWordCount: true
 ---
 
-{{% weibo-card url="http://m.weibo.cn/status/5117349256760790?" %}}原博链接{{% /weibo-card %}}
-
----
 1.
 
 “维吉尔？”但丁敲了敲门，但房间那头没有反应，他提高了点声音又喊了一遍：“维吉尔——？”回答他的依旧是沉默。

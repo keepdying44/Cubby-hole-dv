@@ -12,6 +12,7 @@ cover:
     image: 
 showToc: true
 hideMeta: false 
+showWordCount: true
 ---
 
 但丁睁开眼，从卧室中还没被照亮的黎明里醒来。

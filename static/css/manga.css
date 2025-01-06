@@ -1,0 +1,68 @@
+/* 漫画墙网格布局 */
+.manga-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 一行 4 列 */
+    gap: 20px; /* 网格间距 */
+    margin-top: 30px;
+    justify-content: center; /* 居中对齐整个网格 */
+}
+  
+.grid-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+  
+  
+.grid-item:hover {
+    transform: scale(1.05);
+  
+}
+  
+  
+.grid-item img {
+    width: 100%; /* 封面图片宽度占满网格单元 */
+    max-width: 150px; /* 最大宽度为 150px */
+    height: auto; /* 按比例调整高度 */
+    border-radius: 8px; /* 圆角样式 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    transition: transform 0.3s ease; /* 鼠标悬停效果 */
+  
+}
+  
+
+.grid-item h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--content)
+}
+  
+
+  
+.manga-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  
+}
+  
+
+.manga-pages {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    justify-content: center;
+}
+  
+.manga-page img {
+    width: 100%;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  

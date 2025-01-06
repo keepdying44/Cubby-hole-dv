@@ -19,7 +19,6 @@
 	position: relative;
 	visibility: hidden;
 	overflow: hidden;
-	box-shadow: var(--shadow)
 }
 
 /* 图片样式 */
@@ -41,7 +40,7 @@
 /* 鼠标悬停的缩放和阴影变化 */
 .gallery-photo:hover {
 	transform: translateY(-4px); /* 悬浮时微微向上 */
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* 增强阴影效果 */
+	box-shadow: var(--shadow); /* 增强阴影效果 */
 }
   
 /* 鼠标悬停时图片缩放 */

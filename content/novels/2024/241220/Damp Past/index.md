@@ -12,6 +12,7 @@ cover:
     image: 
 showToc: true
 hideMeta: false 
+showWordCount: true
 ---
 
 

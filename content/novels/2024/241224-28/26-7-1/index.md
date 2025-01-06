@@ -12,6 +12,7 @@ cover:
     image: 
 showToc: true
 hideMeta: false 
+showWordCount: true
 ---
 
 dv生n，微量nk，单性转弟姐，农村但老汉接回媳妇儿的故事。

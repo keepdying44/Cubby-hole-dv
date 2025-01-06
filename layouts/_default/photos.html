@@ -1,9 +1,10 @@
 {{ define "main" }}
 <main>
-  <header>
+  <header class="page-header">
+    {{ partial "breadcrumbs.html" . }}
     <h1>{{ .Title }}</h1>
   </header>
-
+  
   <!-- 标签按钮列表 -->
   <div class="tag-list">
     <button class="tag-filter" data-tag="all">All

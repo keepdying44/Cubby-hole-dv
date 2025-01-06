@@ -1,0 +1,33 @@
+{{ define "main" }}
+<head>
+    <link rel="stylesheet" href="/css/manga.css">
+</head>
+
+<header class="page-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+  </header>
+
+<div class="manga-grid">
+    <p>{{ .Content }}</p>
+
+    {{ if .Pages }}
+    <div class="grid">
+        {{ range .Pages }}
+        <div class="grid-item">
+            <a href="{{ .RelPermalink }}">
+                {{ with .Resources.ByType "image" }}
+                <img src="{{ (index . 0).RelPermalink }}" alt="封面图片">
+                {{ else }}
+                <img src="/images/default-cover.jpg" alt="No cover available">
+                {{ end }}
+                <h3>{{ .Title }}</h3>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+    {{ else }}
+    <p>没有找到任何子页面。</p>
+    {{ end }}
+</div>
+{{ end }}
