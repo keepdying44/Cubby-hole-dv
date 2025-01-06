@@ -48,6 +48,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
   
 }
   
@@ -74,8 +75,8 @@
 @media screen and (max-width: 860px) {
 	.grid {grid-template-columns: repeat(2, 1fr); /* 每行显示2列 */}
     .manga-detail {
-        width: 80%; /* 在小屏幕上进一步缩小宽度 */
         padding: 10px; /* 减少内边距 */
+        text-align: center;
     }
     
 }
