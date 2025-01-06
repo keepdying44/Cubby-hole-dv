@@ -73,12 +73,20 @@
 @media screen and (max-width: 1280px) {
 	.gallery-photo{width:33.3%;}
 }
+
 @media screen and (max-width: 860px) {
 	.gallery-photo{width:49.9%;}
+	.gallery-photo:hover {
+		transform: none; /* 禁用向上移动效果 */
+		box-shadow: none; /* 去除阴影 */
+	}
+	.gallery-photo:hover img {
+		transform: none; /* 禁用缩放 */
+		opacity: 1; /* 恢复默认清晰度 */
+	}
+	.photo-title{display: none;}	
 }
-@media (max-width: 683px){
-	.photo-title{display: none;}
-}
+
 @keyframes fadeIn{
 	0% {opacity: 0;}
    100% {opacity: 1;}
