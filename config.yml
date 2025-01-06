@@ -16,6 +16,7 @@ pygmentsUseClasses: true
 
 hasCJKLanguage: true # 自动检测是否包含中文日文韩文
 
+# list页显示的条目数
 paginate: 7
 
 permalinks: #浏览器链接显示方式
@@ -72,6 +73,15 @@ outputs:
         - HTML
         - RSS
         - JSON
+    section:
+        - HTML
+        - RSS    # 启用 section 的 RSS 输出
+    term:
+        - HTML
+        - RSS    # 启用 term（分类或标签）的 RSS 输出
+    page:
+        - HTML
+        - RSS 
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.

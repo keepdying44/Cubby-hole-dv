@@ -31,6 +31,19 @@
     {{- with .OutputFormats.Get "RSS" -}}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
+    {{- if eq .Kind "page" -}}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{ with site.Author.email }}<author>{{.}}{{ with site.Author.name }} ({{.}}){{end}}</author>{{end}}
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ with .Description | html }}{{ . }}{{ else }}{{ .Summary | html }}{{ end -}}</description>
+      {{- if site.Params.ShowFullTextinRSS }}
+      <content:encoded>{{ (printf "<![CDATA[%s]]>" .Content) | safeHTML }}</content:encoded>
+      {{- end }}
+    </item>
+    {{- else -}}
     {{ range $pages }}
     {{- if and (ne .Layout `search`) (ne .Layout `archives`) }}
     <item>
@@ -46,5 +59,6 @@
     </item>
     {{- end }}
     {{ end }}
+    {{- end }}
   </channel>
 </rss>
