@@ -1,5 +1,5 @@
 ---
-title: "新年快乐"
+title: "前有老二"
 type: "manga"
 layout: "single"
 resources:

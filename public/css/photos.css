@@ -84,7 +84,6 @@
 		transform: none; /* 禁用缩放 */
 		opacity: 1; /* 恢复默认清晰度 */
 	}
-	.photo-title{display: none;}	
 }
 
 @keyframes fadeIn{

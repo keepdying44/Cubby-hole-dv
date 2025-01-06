@@ -1,5 +1,5 @@
 ---
-title: "恭喜发财"
+title: "打至跪地"
 type: "manga"
 layout: "single"
 resources:

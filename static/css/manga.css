@@ -68,11 +68,14 @@
   
 @media screen and (max-width: 1280px) {
 	.grid {
-        grid-template-columns: repeat(3, 1fr); /* 每行显示2列 */
-      }
+        grid-template-columns: repeat(3, 1fr); /* 每行显示2列 */}
+}
+
 @media screen and (max-width: 860px) {
-	.grid {
-        grid-template-columns: repeat(2, 1fr); /* 每行显示2列 */
-      }
+	.grid {grid-template-columns: repeat(2, 1fr); /* 每行显示2列 */}
+    .manga-detail {
+        width: 95%; /* 在小屏幕上进一步缩小宽度 */
+        padding: 10px; /* 减少内边距 */
     }
+    
 }
