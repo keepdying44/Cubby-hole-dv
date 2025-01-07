@@ -43,7 +43,7 @@
 }
   
 
-  
+/*漫画具体页面*/
 .manga-detail {
     max-width: 1200px;
     margin: 0 auto;
@@ -51,6 +51,11 @@
   
 }
   
+.post-header {
+    text-align: left; /* 标题左对齐 */
+    margin-bottom: 30px; /* 与下面内容拉开距离 */
+}
+
 
 .manga-pages {
     display: flex;
@@ -60,6 +65,15 @@
     padding: 0 10px;
 }
   
+.manga-page {
+    display: flex; /* 让图片在容器中居中 */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 为每个容器设置固定宽度 */
+    height: auto; /* 根据内容高度自动调整 */
+}
+
+
 .manga-page img {
     width: 100%;
     margin: 5px;
@@ -76,7 +90,6 @@
 @media screen and (max-width: 860px) {
 	.grid {grid-template-columns: repeat(2, 1fr); /* 每行显示2列 */}
     .manga-detail {
-        max-width: 400px;
         margin: 5px auto;
     }
     

@@ -4,32 +4,30 @@
         <link rel="stylesheet" href="/css/manga.css">
     </head>
     
+    <!-- 标题容器 -->
     <header class="post-header">
-        {{ partial "breadcrumbs.html" . }}
-        <h1 class="post-title">
-          {{ .Title }}
-          {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
-        </h1>
-        {{- if not (.Param "hideMeta") }}
-        <div class="post-meta">
-          {{- partial "post_meta.html" . -}}
-          {{- partial "translation_list.html" . -}}
-          {{- partial "edit_post.html" . -}}
-          {{- partial "post_canonical.html" . -}}
-        </div>
-        {{- end }}
-        
-      </header>
-      
-    <!-- 网格布局，直接遍历图片资源 -->
-    <div class="manga-pages">
-        {{ range .Resources.ByType "image" }}
-        <div class="manga-page">
-            <img src="{{ .RelPermalink }}" alt="{{ .Name }}">
-        </div>
-        {{ end }}
-    </div>
-
-   
+      {{ partial "breadcrumbs.html" . }}
+      <h1 class="post-title">
+        {{ .Title }}
+        {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+      </h1>
+      {{- if not (.Param "hideMeta") }}
+      <div class="post-meta">
+        {{- partial "post_meta.html" . -}}
+        {{- partial "translation_list.html" . -}}
+        {{- partial "edit_post.html" . -}}
+        {{- partial "post_canonical.html" . -}}
+      </div>
+      {{- end }}
+  </header>
+  
+  <!-- 漫画网格布局 -->
+  <div class="manga-pages">
+      {{ range .Resources.ByType "image" }}
+      <div class="manga-page">
+          <img src="{{ .RelPermalink }}" alt="{{ .Name }}">
+      </div>
+      {{ end }}
+  </div>
 </div>
 {{ end }}
