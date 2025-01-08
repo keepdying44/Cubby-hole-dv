@@ -8,4 +8,5 @@
     height: 80%;
     font-size: 160px;
     font-weight: 500;
+    background-color: var(--theme);
 }
