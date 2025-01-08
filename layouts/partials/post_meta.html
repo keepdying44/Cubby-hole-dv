@@ -18,7 +18,7 @@
     
     
     <!--字数-->
-    <span id="post_meta_style_3">
+    <span id="post_meta_style_2">
         {{ if .Params.showWordCount }} 
         <span>
             {{- .WordCount }}字
@@ -28,17 +28,37 @@
     </span>
 
     <!--作者-->
-    <span id="post_meta_style_4"></span>
+    <span id="post_meta_style_3">
+        {{- if .Params.author }}
         <span>
-            {{- if .Params.author }}
-            作者: <a href="/author/{{ .Params.author | urlize }}" style="color: var(--secondary)!important;">{{ .Params.author }}</a>
+            作者: {{ .Params.author }}
             &ensp;
             {{- end }}
         </span>
     </span>
 
-    <!-- 标签 -->
+   <!--翻译-->
+    <span id="post_meta_style_4">
+        {{- if .Params.translation }}
+        <span>
+         翻译: {{ .Params.translation }}
+        &ensp;
+            {{- end }}
+         </span>
+    </span>
+
+    <!--嵌字-->
     <span id="post_meta_style_5">
+        {{- if .Params.typesetting }}
+         <span>
+        嵌字: {{ .Params.typesetting }}
+        &ensp;
+        {{- end }}
+         </span>
+    </span>
+
+    <!-- 标签 -->
+    <span id="post_meta_style_6">
         <span>
             {{- if .Params.tags }}
             <span class="post-tags-meta">
