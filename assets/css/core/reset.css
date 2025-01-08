@@ -44,6 +44,7 @@ body {
     word-break: break-word;
     background: var(--theme);
     vertical-align: baseline;
+
 }
 
 h1{ 

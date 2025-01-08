@@ -53,9 +53,10 @@
 }
 
 
-
 .post-content {
     color: var(--content);
+    text-align: center;
+
 }
 
 .post-content h3,
