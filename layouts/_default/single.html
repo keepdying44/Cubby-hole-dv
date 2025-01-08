@@ -20,9 +20,16 @@
     <!--描述-->
     {{- if .Description }}
     <div class="post-description">
-      {{ .Description | markdownify }}
+      <strong class="summary-title">Summary:&nbsp;</strong> {{ .Description | markdownify }}
     </div>
     {{- end }}
+
+    {{ with .Params.note }}
+    <div class="post-note">
+      <strong class="note-title">Note:&nbsp;</strong> {{ . | markdownify }}
+    </div>
+    {{ end }}
+
   </header>
   {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
   {{- partial "cover1.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}

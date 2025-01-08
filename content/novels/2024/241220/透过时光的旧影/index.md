@@ -2,16 +2,14 @@
 title: "透过时光的旧影" #标题
 date: 2024-12-30 18:30:00
 author: "鹅鹅子000" #作者
-description: 
-  <p> 在某一个平常的早晨，维吉尔没有如往常一般醒过来。</p>
-  <p> *五代后背景 </p>
+description: "在某一个平常的早晨，维吉尔没有如往常一般醒过来。"
+note: 五代后背景*
 tags: 
     - 2024
     - 霜夜颂曲
     - 小说
 slug: "透过时光的旧影" #标签页显示
-cover:
-    image: 
+
 showToc: true
 hideMeta: false 
 showWordCount: true

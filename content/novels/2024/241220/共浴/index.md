@@ -2,7 +2,8 @@
 title: "共浴" #标题
 date: 2024-12-29 00:00:00
 author: "长风"
-description: "是的，为了纪念一年前的入坑文，我写了一篇同名文章，同时这也是一篇点梗文，虽然看起来正常但也许未必。" #描述
+description: 是的，为了纪念一年前的入坑文，我写了一篇同名文章，同时这也是一篇点梗文，虽然看起来正常但也许未必。
+note: cuntboy!Vergil，凝1描写注意。
 tags: 
     - 2024
     - 霜夜颂曲
@@ -14,11 +15,6 @@ cover:
 showToc: true
 hideMeta: false
 showWordCount: true
----
-
-
-隐和玥的点梗，cuntboy!Vergil，凝1描写注意。
-
 ---
 
 

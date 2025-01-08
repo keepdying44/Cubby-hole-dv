@@ -26,6 +26,7 @@
 }
 
 .button {
+    font-family:'Huiwen-mincho';
     background: url('/images/textures/texture.png') repeat,  /* 纹理背景 */var( --secondary);  /* 背景颜色，添加透明度 */
     color: var(--tertiary);  /* 文字颜色 */
     font-weight: bold;

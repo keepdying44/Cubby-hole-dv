@@ -2,24 +2,19 @@
 title: "Damp Past" #标题
 date: 2024-12-27 15:15:00
 author: "长风" #作者
-description: "如何惹怒你那个看起来脾气很好的弟弟？" #描述
+description: 如何惹怒你那个看起来脾气很好的弟弟?   
+note: 4dv，指奸，ABO，双性Vergil。感谢小光的帮助!
 tags: 
     - 2024
     - 霜夜颂曲
     - 小说
 slug: "Damp Past" #标签页显示
-cover:
-    image: 
 showToc: true
 hideMeta: false 
 showWordCount: true
 ---
 
 
-
-4dv，指奸，ABO，双性Vergil。感谢小光的帮助！
-
----
 
 雨水滴落在他脸上。他想起他那潮湿的一生。
 

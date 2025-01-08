@@ -1,5 +1,5 @@
 ---
-title: "Novels"
+title: "NOVELS"
 layout: "novel"
 url: "/novel"
 summary: "novel"

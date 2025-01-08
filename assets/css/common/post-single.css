@@ -1,3 +1,4 @@
+
 .page-header,
 .post-header {
     margin: 24px auto var(--content-gap) auto;
@@ -11,11 +12,17 @@
 .post-description {
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 14px;
-    border-left: 4px solid #64625c;
-    padding: 10px 15px;
+    font-size: 15px;
 }
 
+.post-note{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.summary-title,
+.note-title{
+    color: var(--tag-bg);
+}
 .post-author {
     font-size: 14px;      /* 字体大小 */
     color: #000;          /* 字体颜色 */
@@ -44,6 +51,8 @@
 .breadcrumbs a {
     font-size: 16px;
 }
+
+
 
 .post-content {
     color: var(--content);
