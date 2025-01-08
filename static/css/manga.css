@@ -67,7 +67,6 @@
 .manga-detail {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
   
 }
   
@@ -82,7 +81,6 @@
     flex-wrap: wrap;
     margin-top: 5px;
     justify-content: center;
-    padding: 0 10px;
 }
   
 .manga-page {
