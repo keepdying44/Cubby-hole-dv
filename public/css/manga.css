@@ -109,8 +109,5 @@
 
 @media screen and (max-width: 860px) {
 	.grid {grid-template-columns: repeat(2, 1fr); /* 每行显示2列 */}
-    .manga-detail {
-        margin: 5px auto;
-    }
     
 }
