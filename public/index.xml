@@ -12,33 +12,6 @@
     <language>zh</language>
     <lastBuildDate>Mon, 06 Jan 2025 14:37:47 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>LOVE STORY</title>
-      <link>http://localhost:1313/manga/translation/love-story/</link>
-      <pubDate>Mon, 06 Jan 2025 14:37:47 +0000</pubDate>
-      
-      <guid>http://localhost:1313/manga/translation/love-story/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RG·ABSURD LOVERS</title>
-      <link>http://localhost:1313/manga/translation/royalguard2/</link>
-      <pubDate>Mon, 06 Jan 2025 14:37:47 +0000</pubDate>
-      
-      <guid>http://localhost:1313/manga/translation/royalguard2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RG·NIGHTMARE</title>
-      <link>http://localhost:1313/manga/translation/royalguard1/</link>
-      <pubDate>Mon, 06 Jan 2025 14:37:47 +0000</pubDate>
-      
-      <guid>http://localhost:1313/manga/translation/royalguard1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>旺铺招租</title>
       <link>http://localhost:1313/manga/2024/241224-28/manga1/</link>
       <pubDate>Mon, 06 Jan 2025 14:37:47 +0000</pubDate>
@@ -156,11 +129,38 @@
     </item>
     
     <item>
+      <title>LOVE SONG</title>
+      <link>http://localhost:1313/manga/translation/love-song/</link>
+      <pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/manga/translation/love-song/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>瞬间风速</title>
       <link>http://localhost:1313/manga/translation/sjfs/</link>
       <pubDate>Fri, 01 Aug 2008 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/manga/translation/sjfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RG·ABSURD LOVERS</title>
+      <link>http://localhost:1313/manga/translation/royalguard2/</link>
+      <pubDate>Thu, 06 Jan 2005 14:37:47 +0000</pubDate>
+      
+      <guid>http://localhost:1313/manga/translation/royalguard2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RG·NIGHTMARE</title>
+      <link>http://localhost:1313/manga/translation/royalguard1/</link>
+      <pubDate>Thu, 06 Jan 2005 14:37:47 +0000</pubDate>
+      
+      <guid>http://localhost:1313/manga/translation/royalguard1/</guid>
       <description></description>
     </item>
     

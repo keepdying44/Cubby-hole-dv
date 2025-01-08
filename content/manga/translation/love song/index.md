@@ -1,5 +1,5 @@
 ---
-title: "LOVE STORY"
+title: "LOVE SONG"
 type: "manga"
 layout: "single"
 resources:
@@ -7,6 +7,6 @@ resources:
 author: 宗六
 translation: "@马拉桑喝酒醉"
 typesetting: "@马拉桑喝酒醉"
-date: 2025-01-06 14:37:47
+date: 2024-09-22 00:00:00
 showWordCount: false
 ---

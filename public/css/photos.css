@@ -95,6 +95,7 @@
 
 /* Tag 栏样式 */
 .tag-list {
+	
 	display: flex; /* 使用 flexbox 布局 */
 	justify-content: center; /* 水平居中 */
 	gap: 10px; /* 按钮之间的间距 */
@@ -104,6 +105,7 @@
 }
 
 .tag-filter {
+  font-family:'Huiwen-mincho';
   padding: 5px 10px;
   margin: 3px;
   border: 2px solid var(--border-color);
