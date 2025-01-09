@@ -27,10 +27,10 @@
 
 .button {
     font-family:'Huiwen-mincho';
-    background: url('/images/textures/texture.png') repeat,  /* 纹理背景 */var( --secondary);  /* 背景颜色，添加透明度 */
-    color: var(--tertiary);  /* 文字颜色 */
+    background: var(--texture) repeat, var( --secondary); 
+    color: var(--tertiary);
     font-weight: bold;
-    background-size: cover; /* 全覆盖 */
+    background-size: cover;
     border-radius: var(--radius);
     margin: 8px;
     padding: 6px;

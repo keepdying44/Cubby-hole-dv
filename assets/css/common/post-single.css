@@ -321,6 +321,7 @@
 }
 
 .post-tags li {
+    font-family:'Huiwen-mincho';
     display: inline-block;
     margin-inline-end: 3px;
     margin-bottom: 5px;
@@ -330,11 +331,12 @@
 .share-buttons,
 .paginav {
     border-radius: var(--radius);
-    background: var(--code-bg);
+    background: var(--texture), var(--code-bg);
     border: 1px solid var(--border);
 }
 
 .post-tags a {
+    font-family:'Huiwen-mincho';
     display: block;
     padding-inline-start: 14px;
     padding-inline-end: 14px;

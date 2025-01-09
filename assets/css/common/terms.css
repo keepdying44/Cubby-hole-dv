@@ -5,14 +5,16 @@
 }
 
 .terms-tags a {
+    font-family: 'Huiwen-mincho';
     display: block;
     padding: 3px 10px;
-    background: var(--tertiary);
+    background: var(--texture) repeat, var(--tertiary);
+    background-size: cover;
     border-radius: 6px;
     transition: transform 0.1s;
 }
 
 .terms-tags a:active {
-    background: var(--tertiary);
+    background: var(--texture) repeat, var(--tertiary);
     transform: scale(0.96);
 }

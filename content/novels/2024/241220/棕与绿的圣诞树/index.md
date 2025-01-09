@@ -176,9 +176,5 @@ showWordCount: true
 他们还能一起度过的时间，总会慢慢超过他们曾经错过的那些时日。
 
 <br>
-<br>
 
 {{<figure src="2412201.jpg#center" caption="圣诞树" width="500px">}}
-
-<br>
-<br>
