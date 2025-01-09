@@ -6,7 +6,7 @@
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
-    --theme: rgb(182, 192, 203);
+    --theme: rgb(200, 209, 219);
     --entry: rgb(219, 224, 233);
     --primary: rgb(30, 30, 30);
     --secondary: rgb(108, 108, 108);
@@ -20,7 +20,7 @@
 }
 
 .dark {
-    --theme: rgb(61, 36, 36);
+    --theme: rgb(62, 41, 41);
     --entry: rgb(46, 46, 51);
     --primary: rgb(206, 206, 207);
     --secondary: rgb(155, 156, 157);
