@@ -2,6 +2,8 @@
 	--tag-bg: rgb(110, 46, 46);
 	--radius: 7px; /* 全局圆角 */
 	--shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 全局阴影 */
+    --gap: 15px;
+    --gap-larger: 30px;
 }
 
 .dark {
@@ -9,18 +11,20 @@
 	--shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 
+
+
+
 /* 漫画墙网格布局 */
 .manga-grid {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: var(--gap);
+    padding: var(--gap);
 }
   
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 一行 4 列 */
-    gap: 20px; /* 网格间距 */
-    margin-top: 30px;
+    gap: var(--gap-larger); /* 网格间距 */
     justify-content: center; /* 居中对齐整个网格 */
 }
   
@@ -33,12 +37,10 @@
 }
 
 .grid-item h3 {
-    text-align: center;
-    max-width: 150px;
-    margin-top: 10px;
+    margin-top: var(--gap);
     font-size: 15px;
     word-wrap: break-word;
-    color: var(--content)
+    color: var(--content);
     
 }
   
@@ -47,19 +49,60 @@
   
 }
   
-  
 .grid-item img {
     width: 100%; /* 封面图片宽度占满网格单元 */
     max-width: 150px; /* 最大宽度为 150px */
     height: auto; /* 按比例调整高度 */
     border-radius: var(--radius); /* 圆角样式 */
-    box-shadow: var(--shadow); /* 添加阴影 */
     margin: 0 auto; /* 居中对齐 */
     transition: transform 0.3s ease; /* 鼠标悬停效果 */
-  
 }
   
+.grid-item img:hover {
+    transform: scale(1.05); /* 悬停时略微放大图片 */
+    box-shadow: var(--shadow);
+}
 
+/* Tags 样式 */
+.tags-filter {
+    display: flex; /* 使用 flexbox 布局 */
+	justify-content: center; /* 水平居中 */
+	gap: var(--gap); /* 按钮之间的间距 */
+	margin-top: var(--gap); /* 设置顶部的间距 */
+	margin-bottom: var(--gap); /* 设置底部距离 */
+	flex-wrap: wrap; /* 小屏幕自动换行 */
+}
+
+.tag-btn {
+  font-family:'Huiwen-mincho';
+  padding: 5px 10px;
+  margin: 3px;
+  border: 2px solid var(--border-color);
+  background: url('/images/textures/texture.png') repeat, var( --secondary);
+  background-size: cover;
+  color: var( --tertiary);
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.tag-btn.hover,
+.tag-btn.active {
+    background-color: var( --tag-bg);
+	transform: translateY(-2px);
+  	box-shadow: var(--shadow);
+}
+
+
+/* 隐藏未筛选的漫画 */
+.manga-item {
+    display: none;
+}
+
+.manga-item.visible {
+    display: block;
+}
 
   
 

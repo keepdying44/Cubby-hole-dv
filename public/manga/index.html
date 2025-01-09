@@ -11,7 +11,7 @@
 <meta name="description" content="Manga - CUBBYHOLE-DV">
 <meta name="author" content="管理员">
 <link rel="canonical" href="http://localhost:1313/manga/">
-<link crossorigin="anonymous" href="../assets/css/stylesheet.154d31cbcbeed68f2c53f49d0cdb80fe6a572b11a7ea1338d273ec188f96c942.css" integrity="sha256-FU0xy8vu1o8sU/SdDNuA/mpXKxGn6hM40nPsGI&#43;WyUI=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="../assets/css/stylesheet.977f6354489d58e1db233baf23e41ede76e5d0035aa8c7aadf5968b49333dbf8.css" integrity="sha256-l39jVEidWOHbIzuvI&#43;Qe3nbl0ANaqMeq31lotJMz2/g=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon.png">
@@ -180,8 +180,55 @@
             <circle cx="5" cy="19" r="1" />
           </svg>
         </a>
-      </h1>
-  </header>
+    </h1>
+</header>
+
+
+<div class="tags-filter">
+    
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+
+    
+    
+        <button class="tag-btn active" data-tag="all">全部</button>
+        
+            <button class="tag-btn" data-tag="原创">原创</button>
+        
+            <button class="tag-btn" data-tag="汉化">汉化</button>
+        
+    
+</div>
+
 
 <div class="manga-grid">
     <p></p>
@@ -189,7 +236,7 @@
     
     <div class="grid">
         
-        <div class="grid-item">
+        <div class="grid-item" data-tags="原创">
             <a href="../manga/2024/241224-28/manga1/">
                 
                 <img src="../manga/2024/241224-28/manga1/IMG_6013.JPG" alt="封面图片">
@@ -198,7 +245,7 @@
             </a>
         </div>
         
-        <div class="grid-item">
+        <div class="grid-item" data-tags="原创">
             <a href="../manga/2024/241224-28/manga2/">
                 
                 <img src="../manga/2024/241224-28/manga2/IMG_6013.JPG" alt="封面图片">
@@ -207,7 +254,7 @@
             </a>
         </div>
         
-        <div class="grid-item">
+        <div class="grid-item" data-tags="汉化">
             <a href="../manga/translation/love-song/">
                 
                 <img src="../manga/translation/love-song/00.jpg" alt="封面图片">
@@ -216,7 +263,7 @@
             </a>
         </div>
         
-        <div class="grid-item">
+        <div class="grid-item" data-tags="汉化">
             <a href="../manga/translation/sjfs/">
                 
                 <img src="../manga/translation/sjfs/01.png" alt="封面图片">
@@ -225,7 +272,7 @@
             </a>
         </div>
         
-        <div class="grid-item">
+        <div class="grid-item" data-tags="汉化">
             <a href="../manga/translation/royalguard2/">
                 
                 <img src="../manga/translation/royalguard2/*RGback.jpg" alt="封面图片">
@@ -234,7 +281,7 @@
             </a>
         </div>
         
-        <div class="grid-item">
+        <div class="grid-item" data-tags="汉化">
             <a href="../manga/translation/royalguard1/">
                 
                 <img src="../manga/translation/royalguard1/*RGcover.jpg" alt="封面图片">
@@ -246,6 +293,54 @@
     </div>
     
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.tag-btn'); 
+        const items = document.querySelectorAll('.grid-item'); 
+
+        
+        const tagMap = {}; 
+        items.forEach(item => {
+            const itemTags = item.getAttribute('data-tags').split(','); 
+            itemTags.forEach(tag => {
+                if (!tagMap[tag]) tagMap[tag] = []; 
+                tagMap[tag].push(item); 
+            });
+        });
+
+        
+        function filterItems(tag) {
+            
+            items.forEach(item => item.style.display = 'none');
+
+            
+            if (tag === 'all') {
+                items.forEach(item => item.style.display = 'block');
+            } else if (tagMap[tag]) {
+                
+                tagMap[tag].forEach(item => item.style.display = 'block');
+            }
+
+            
+            buttons.forEach(btn => btn.classList.remove('active')); 
+            const activeButton = document.querySelector(`.tag-btn[data-tag="${tag}"]`);
+            if (activeButton) activeButton.classList.add('active'); 
+        }
+
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tag = button.getAttribute('data-tag');
+                filterItems(tag); 
+            });
+        });
+
+        
+        filterItems('all');
+    });
+</script>
 
 
     </main>

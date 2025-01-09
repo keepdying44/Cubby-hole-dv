@@ -11,7 +11,9 @@
 
 
 /* 照片区域整体容器 */
-.gallery-photos{width:100%;}
+.gallery-photos{
+	width:100%;
+}
 
 
 /* 照片容器 */
@@ -28,7 +30,7 @@
 	width: 100%;
 	padding: 5px;
 	cursor: pointer;
-	transition: all .4s ease-in-out;/* 动画效果 */
+	transition: all .3s ease-in-out;/* 动画效果 */
 }
 
 
@@ -40,7 +42,7 @@
 
 /* 鼠标悬停的缩放和阴影变化 */
 .gallery-photo:hover {
-	transform: translateY(-4px); /* 悬浮时微微向上 */
+	transform: translateY(-2px); /* 悬浮时微微向上 */
 	box-shadow: var(--shadow); /* 增强阴影效果 */
 }
   
@@ -95,7 +97,6 @@
 
 /* Tag 栏样式 */
 .tag-list {
-	
 	display: flex; /* 使用 flexbox 布局 */
 	justify-content: center; /* 水平居中 */
 	gap: 10px; /* 按钮之间的间距 */

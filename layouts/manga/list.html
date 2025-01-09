@@ -15,16 +15,38 @@
             <circle cx="5" cy="19" r="1" />
           </svg>
         </a>
-      </h1>
-  </header>
+    </h1>
+</header>
 
+<!-- Tags Filter -->
+<div class="tags-filter">
+    {{ $allTags := slice }}
+    {{ range .Pages }}
+        {{ $tags := .Params.tags | default (slice) }}
+        {{ range $tags }}
+            {{ $allTags = $allTags | append . }}
+        {{ end }}
+    {{ end }}
+
+    {{ $uniqueTags := uniq $allTags }}
+    {{ if gt (len $uniqueTags) 0 }}
+        <button class="tag-btn active" data-tag="all">全部</button>
+        {{ range $uniqueTags }}
+            <button class="tag-btn" data-tag="{{ . }}">{{ . }}</button>
+        {{ end }}
+    {{ else }}
+        <p>没有可用的标签。</p>
+    {{ end }}
+</div>
+
+<!-- Manga Grid -->
 <div class="manga-grid">
     <p>{{ .Content }}</p>
 
     {{ if .Pages }}
     <div class="grid">
         {{ range .Pages }}
-        <div class="grid-item">
+        <div class="grid-item" data-tags="{{ delimit (or .Params.tags (slice)) "," }}">
             <a href="{{ .RelPermalink }}">
                 {{ with .Resources.ByType "image" }}
                 <img src="{{ (index . 0).RelPermalink }}" alt="封面图片">
@@ -40,5 +62,53 @@
     <p>没有找到任何子页面。</p>
     {{ end }}
 </div>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.tag-btn'); // 所有标签按钮
+        const items = document.querySelectorAll('.grid-item'); // 所有漫画项
+
+        // 初始化按钮和标签缓存
+        const tagMap = {}; // 用于存储每个标签对应的漫画项
+        items.forEach(item => {
+            const itemTags = item.getAttribute('data-tags').split(','); // 获取标签数组
+            itemTags.forEach(tag => {
+                if (!tagMap[tag]) tagMap[tag] = []; // 如果标签不存在，初始化为数组
+                tagMap[tag].push(item); // 将漫画项加入对应标签的数组
+            });
+        });
+
+        // 定义一个函数，切换标签和显示内容
+        function filterItems(tag) {
+            // 隐藏所有漫画项
+            items.forEach(item => item.style.display = 'none');
+
+            // 如果是 "all"，显示所有
+            if (tag === 'all') {
+                items.forEach(item => item.style.display = 'block');
+            } else if (tagMap[tag]) {
+                // 显示对应标签的漫画项
+                tagMap[tag].forEach(item => item.style.display = 'block');
+            }
+
+            // 更新按钮状态
+            buttons.forEach(btn => btn.classList.remove('active')); // 移除所有按钮的 active 类
+            const activeButton = document.querySelector(`.tag-btn[data-tag="${tag}"]`);
+            if (activeButton) activeButton.classList.add('active'); // 为当前点击的按钮添加 active 类
+        }
+
+        // 给每个按钮绑定点击事件
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tag = button.getAttribute('data-tag');
+                filterItems(tag); // 根据点击的标签筛选内容
+            });
+        });
+
+        // 初始化时显示所有内容
+        filterItems('all');
+    });
+</script>
 
 {{ end }}

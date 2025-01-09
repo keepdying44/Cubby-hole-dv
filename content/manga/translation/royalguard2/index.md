@@ -7,6 +7,8 @@ resources:
 author: RINDOUMARU
 translation: "@祀_沉迷暗表不能自拔"
 typesetting: "@狼千月"
+tags:
+  - 汉化
 date: 2005-01-06 14:37:47
 showWordCount: false
 ---

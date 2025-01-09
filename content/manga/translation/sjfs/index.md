@@ -7,6 +7,8 @@ resources:
 author: さたけ
 translation: "@马拉桑喝酒醉"
 typesetting: "@马拉桑喝酒醉"
+tags:
+  - 汉化
 date: 2008-08-01
 showWordCount: false
 ---
