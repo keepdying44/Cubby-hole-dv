@@ -36,34 +36,24 @@ languages:
           category: categories
           tag: tags
           series: series
-        profileMode:
-          enabled: true
-          title: DV联产仓储
-          subtitle: 以此纪念
-          imageURL: /avatar.gif #头像
-          buttons:
-            - name: 小说
-              url: /novels
-            - name: 插画
-              url: photos
-            - name: 漫画
-              url: /manga
-            - name: 外链
-              url: /link
+            
         menu:
             main:
               - name: 活动
                 url: /events
+                weight: 1
+              - name: 小说
+                url: /novels
                 weight: 2
-              - name: 归档
-                url: archives/
+              - name: 漫画
+                url: /manga
                 weight: 3
-              - name: 关于
-                url: about/
-                weight: 5
+              - name: 插画
+                url: photos
+                weight: 4
               - name: 搜索
                 url: search/
-                weight: 8
+                weight: 5
             
 
                            
@@ -84,10 +74,14 @@ outputs:
         - RSS 
 
 params:
+    mainSections:
+    - manga
+    - novels
+
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    description: "DV联产仓储"
-    author: 管理员
-    # author: ["Me", "You"] # multiple authors
+    description: "DV-CUBBYHOLE"
+     #author: 管理员
+     #author: ["Me", "You"] # multiple authors
 
     footer:
         since: 2024
@@ -114,9 +108,8 @@ params:
        
 
     homeInfoParams:
-        Title: "DV联产仓储"
+        Title: "DV-CUBBYHOLE"
         Content: >
-            以此纪念
 
 
 

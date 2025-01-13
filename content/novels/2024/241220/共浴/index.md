@@ -7,11 +7,9 @@ note: cuntboy!Vergil，凝1描写注意。
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
   
 slug: "共浴" #标签页显示
-cover:
-    image: 
+mediaType: "novels"
 showToc: true
 hideMeta: false
 showWordCount: true

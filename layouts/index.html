@@ -1,0 +1,98 @@
+{{ define "main" }}
+<head>
+  {{ $showcaseCSS := resources.Get "css/common/showcase.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $showcaseCSS.RelPermalink }}">
+</head>
+
+<body>
+  <!-- 主布局：两列 -->
+  <div id="media-showcase" class="two-column-layout">
+    
+    <!-- 左侧：Welcome 板和空白展示框 -->
+<div class="media-column-left">
+  <!-- 欢迎板 -->
+  <div class="welcome-container">
+      <div class="welcome-sub-container">
+          <h2>NOTICE</h2>
+          <p class="welcome-description">
+              欢迎来到cubbyhole，这里是一个小型同人联产活动存档站点。
+          </p>
+          <p class="welcome-description">
+              更多信息请查看
+              <a href="/about" class="welcome-link">
+                  <span class="highlight">【关于】</span>
+              </a>。
+          <p class="welcome-description">
+            通过
+            <a href="/link" class="welcome-link">
+                <span class="highlight">【这里】</span>可以拜访留下了名片的创作者。
+            </a>
+          </p>
+      </div>
+  </div> <!-- ✅ 正确关闭 `welcome-container` -->
+
+  <!-- 电视机框 -->
+<div class="placeholder-container">
+    <div class="tv-frame">
+        <!-- 整体都变成一个可点击的链接 -->
+        <a href="https://www.bilibili.com/video/BV1uT4y1P7CX?spm_id_from=333.788.recommend_more_video.1&vd_source=974f88637832c153a92feb8e40856ed3" target="_blank" class="tv-link">
+            <!-- 电视框架 -->
+            <img class="tv-image" src="/images/tv.png" alt="电视机">
+            <!-- 电视屏幕上的 GIF -->
+            <img class="tv-screen" id="slideshow" src="/images/1.GIF" alt="播放中的图片">
+        </a>
+    </div>
+</div>
+
+</div>
+
+    <!-- 右侧：小说更新清单 -->
+    <div class="media-column-right">
+      <h2>WHAT'S NEW ?</h2>
+      <section class="updates-section">
+        <h3>Novels</h3>
+        <ul class="archive-list">
+          {{ $filteredNovels := where .Site.RegularPages ".Params.mediaType" "novels" }}
+          {{ $sortedNovels := $filteredNovels.ByPublishDate.Reverse }}
+          {{ $latestNovels := first 5 $sortedNovels }}
+          {{ range $latestNovels }}
+          <li class="archive-item">
+            <span class="archive-date">{{ .Date.Format "2006-01-02" }}</span>
+            <a class="archive-link" href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="updates-section">
+        <h3>Manga</h3>
+        <ul class="archive-list">
+          {{ $filteredManga := where .Site.RegularPages ".Params.mediaType" "manga" }}
+          {{ $sortedManga := $filteredManga.ByPublishDate.Reverse }}
+          {{ $latestManga := first 3 $sortedManga }}
+          {{ range $latestManga }}
+          <li class="archive-item">
+            <span class="archive-date">{{ .Date.Format "2006-01-02" }}</span>
+            <a class="archive-link" href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </section>
+      
+      <section class="updates-section">
+        <h3>Gallery</h3>
+        <ul class="archive-list">
+            {{ $photoData := .Site.Data.photos }}
+            {{ with $photoData.photos }}
+            <li class="archive-item">
+                <span class="archive-link">画廊共收存 {{ len . }} 幅作品。</span>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    </div>
+  </div>
+</body>
+
+
+{{ end }}

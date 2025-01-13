@@ -30,7 +30,7 @@
 
     {{ $uniqueTags := uniq $allTags }}
     {{ if gt (len $uniqueTags) 0 }}
-        <button class="tag-btn active" data-tag="all">全部</button>
+        <button class="tag-btn active" data-tag="all">ALL</button>
         {{ range $uniqueTags }}
             <button class="tag-btn" data-tag="{{ . }}">{{ . }}</button>
         {{ end }}

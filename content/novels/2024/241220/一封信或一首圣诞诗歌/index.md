@@ -6,10 +6,8 @@ description: "🎄✨MerryChristmas！⭐❄️" #描述
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
 slug: "一封信或一首圣诞诗歌" #标签页显示
-cover:
-    image: 
+mediaType: "novels"
 showToc: true
 hideMeta: false 
 showWordCount: true

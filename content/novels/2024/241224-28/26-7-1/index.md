@@ -6,10 +6,8 @@ description: "尼禄视角与DV视角下的小故事。" #描述
 tags: 
     - 2024
     - 24剩蛋
-    - 小说
 slug: "俺们村的但老汉" #标签页显示
-cover:
-    image: 
+mediaType: "novels"
 showToc: true
 hideMeta: false 
 showWordCount: true

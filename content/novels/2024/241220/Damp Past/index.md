@@ -7,8 +7,8 @@ note: 4dv，指奸，ABO，双性Vergil。感谢小光的帮助!
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
 slug: "Damp Past" #标签页显示
+mediaType: "novels"
 showToc: true
 hideMeta: false 
 showWordCount: true

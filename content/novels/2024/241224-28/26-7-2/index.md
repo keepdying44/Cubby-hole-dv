@@ -6,10 +6,8 @@ description: "尼禄视角与DV视角下的小故事。" #描述
 tags: 
     - 2024
     - 24剩蛋
-    - 小说
 slug: "贫穷老但丁的幸福生活" #标签页显示
-cover:
-    image: 
+mediaType: "novels"
 showToc: true
 hideMeta: false 
 showWordCount: true

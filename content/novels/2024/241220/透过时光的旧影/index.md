@@ -7,9 +7,8 @@ note: 五代后背景*
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
 slug: "透过时光的旧影" #标签页显示
-
+mediaType: "novels"
 showToc: true
 hideMeta: false 
 showWordCount: true

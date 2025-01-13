@@ -7,8 +7,9 @@
 .terms-tags a {
     font-family: 'Huiwen-mincho';
     display: block;
-    padding: 3px 10px;
-    background: var(--texture) repeat, var(--tertiary);
+    color: var(--tertiary);
+    padding: 2px 8px;
+    background: var(--texture) repeat, var(--secondary);
     background-size: cover;
     border-radius: 6px;
     transition: transform 0.1s;

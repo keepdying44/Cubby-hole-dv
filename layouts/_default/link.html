@@ -1,0 +1,49 @@
+{{- define "main" }}
+<head>
+    {{- partial "head.html" . }}
+    <link rel="stylesheet" href="/extended/link.css"> 
+</head>
+
+<body>
+    <main>
+        <header class="page-header">
+          {{ partial "breadcrumbs.html" . }}
+          <h1 class="title-with-rss">
+            {{ .Title }}
+            <a href="/link.md" title="RSS" aria-label="RSS" class="rss-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" height="23">
+                <path d="M4 11a9 9 0 0 1 9 9" />
+                <path d="M4 4a16 16 0 0 1 16 16" />
+                <circle cx="5" cy="19" r="1" />
+              </svg>
+            </a>
+          </h1>
+        </header>
+
+
+        <div class="link-section">
+            <!-- 友链部分 -->
+            <div class="link-container">
+              <h2>创作者门牌号</h2>
+              <ul>
+                <li><a href="https://parfaitlovermisaka.github.io/2024/12/28/dvplog241228/" target="_blank">24剩蛋 · 1228 1:00</a></li>
+                <li><a href="https://example2.com" target="_blank">友链2</a></li>
+                <li><a href="https://example3.com" target="_blank">友链3</a></li>
+              </ul>
+            </div>
+          
+            <!-- 视频链接部分 -->
+            <div class="link-container">
+              <h2>视频</h2>
+              <ul>
+                <li><a href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.337.search-card.all.click" target="_blank">视频1</a></li>
+                <li><a href="https://example2.com" target="_blank">视频2</a></li>
+                <li><a href="https://example3.com" target="_blank">视频3</a></li>
+              </ul>
+            </div>
+          </div>
+
+</body>
+</html>
+{{ end }}

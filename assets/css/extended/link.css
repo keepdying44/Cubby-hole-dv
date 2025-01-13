@@ -1,0 +1,67 @@
+/* 父容器样式 */
+.link-section {
+    display: flex;
+    justify-content: space-between; /* 两块内容左右分布 */
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* 每个子块的样式 */
+  .link-container {
+    flex: 1; /* 每块平分父容器宽度 */
+    background-color: var(--entry); /* 背景色 */
+    border-radius: 10px;
+    padding:20px;
+    text-align: center; /* 内容居中 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .link-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary);
+  }
+  
+  .link-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .link-container li {
+    margin-bottom: 10px;
+  }
+  
+  .link-container a {
+    text-decoration: none;
+    color: var(--content);
+    font-size: 16px;
+  }
+  
+  .link-container a:hover {
+    text-decoration: none;
+    color: var(--tag-bg);
+  }
+  
+  /* 响应式布局调整 */
+  @media (max-width: 768px) {
+    .link-section {
+      flex-direction: column; /* 改为垂直布局 */
+      gap: 15px; /* 调整块之间的间距 */
+    }
+  
+    .link-container {
+      max-width: 100%; /* 块宽度占满父容器 */
+      max-width: 400px;
+      margin: 0 auto; /* 居中对齐 */
+    }
+  }
+  @media (max-width: 480px) {
+    .link-container {
+        width: 95%; /* 小屏时稍微占满屏幕 */
+        max-width: 400px; /* 控制最大宽度 */
+        padding: 10px;
+    }
+}

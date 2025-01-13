@@ -1,12 +1,12 @@
 ---
 title: "旺铺招租"
-type: "manga"
-layout: "single"
+date: 2025-01-06 14:37:47
+author: 求你们来
 resources:
   - src: "**.jpg"
-author: 求你们来
 tags:
-  - 原创
-date: 2025-01-06 14:37:47
+  - 原稿
+mediaType: manga
+category: "原稿"
 showWordCount: false
 ---

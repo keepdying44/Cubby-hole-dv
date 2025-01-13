@@ -1,0 +1,260 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+  }  
+  h1, h2, h4 {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
+/* 主布局：两列 */
+#media-showcase {
+    display: flex; /* 启用 Flexbox */
+    justify-content: space-between; /* 左右分布 */
+    align-items: flex-start;
+    gap: 20px; /* 两列之间的间距 */
+    width: 100%; /* 宽度占屏幕的 90% */
+    max-width: 1200px; /* 限制最大宽度 */
+    margin: 40px auto; /* 页面居中 */
+}
+/* 父容器：两列布局 */
+.two-column-layout {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 子容器左右分布 */
+    gap: 20px; /* 两列之间的间距 */
+    width: 100%; /* 布局宽度为屏幕的 90% */
+    max-width: 1200px; /* 限制最大宽度 */
+    margin: 40px auto; /* 页面居中 */
+  }
+  
+  /* 左侧列 */
+  .media-column-left {
+    flex: 1; /* 左侧占据相同空间 */
+    max-width: 50%;
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    gap: 20px; /* 两块之间的间距 */
+  }
+  
+  /* 欢迎板 */
+.welcome-container {
+    position: relative; /* 可选：让父容器相对定位 */
+    width: 100%;
+    min-width: 320px;
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
+    padding: 20px;
+    background: var(--texture) repeat,var(--secondary);
+    background-size: cover;
+    margin-top: 20px;
+    margin-left: -30px;
+    display: flex; /* 启用 Flexbox */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    border-radius:var(--radius);
+    font-size: 30px;
+    transform: none; /* 确保无偏移 */
+    top: auto; /* 默认不做垂直居中 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-sub-container{
+    width: 100%;
+    height: auto;
+    background:  url('/images/textures/texture4.png') repeat, var(--entry);
+    background-size: cover;
+    text-align: center;
+    line-height: 100px; /* 文本居中 */
+    font-size: 32px;
+    color: var(--tag-bg);
+}
+.welcome-sub-container h2{
+    padding-top: 20px;
+    font-size: 32px;
+    color: var(--tag-bg);
+}
+
+
+.welcome-description {
+    font-size: 16px; /* 调整文字大小 */
+    color: var(--content); /* 文字颜色 */
+    padding: 10px 20px;
+    line-height: 1.5; /* 增加行高 */
+    text-align: left;
+}
+
+.welcome-link .highlight {
+    color: var(--tag-bg); 
+    font-weight: bold;
+}
+.welcome-link .highlight:hover {
+    color: var(--tag-bg2); 
+}
+
+  /* 空白展示框 */
+  .placeholder-container {
+    width: 100%; /* 让它继承父容器的宽度 */
+    max-width: 300px; 
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 14px; /* 保证框居中 */
+    margin-left: -14px;
+}
+
+
+.tv-frame {
+    width: 100%; /* 保证框架的宽度适配父容器 */
+    position: relative; /* 为屏幕内容提供绝对定位参照 */
+}
+
+.tv-link {
+  display: block; /* 将链接变为块级元素，包裹内部内容 */
+  position: relative; /* 使链接区域覆盖整个框架和屏幕 */
+  width: 100%; /* 链接宽度与父容器一致 */
+  height: 100%; /* 链接高度与父容器一致 */
+  text-decoration: none; /* 去掉链接的下划线 */
+}
+
+.tv-image {
+    width: 100%; /* 让电视框架图片完全占据框架宽度 */
+    display: block; 
+    z-index: 10;
+    position: relative;
+}
+
+.tv-screen {
+    position: absolute;
+    width: 75%; /* 让屏幕内容适配电视机的实际比例 */
+    height: 75%; /* 保持屏幕内容高度贴合 */
+    top: 45%; /* 根据电视机图片调整屏幕位置 */
+    left: 40%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* 确保图片适配屏幕区域，不变形 */
+    border-radius: 5px; /* 圆角，贴合屏幕外形 */
+    z-index: 5;
+}
+
+
+  /* 右侧列 */
+  .media-column-right {
+    display: block;
+    max-width: 500px;
+    min-width: 300px;
+    width: 90%;
+    background: var(--texture2) repeat; 
+    background-size: cover;
+    padding-bottom: 30px;
+    margin-top: 12px;
+    margin-left: clamp(0px, 5vw, 15px); 
+  }
+  
+  /* 右侧标题样式 */
+  .media-column-right h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-top:  40px;
+    margin-bottom: 15px;
+    color: var(--primary);
+  }
+  
+
+.updates-section h3{
+    margin-bottom: 10px;
+    padding-left: 35px;
+    font-size: 24px;
+    color: var(--tag-bg);
+}
+
+  /* 小说列表样式 */
+  .archive-list{
+    list-style: none; /* 移除默认的列表样式 */
+    padding: 0 44px;
+    margin: 0;
+  }
+  
+.archive-date{
+    font-size: 15px;
+    margin-right: 15px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+  .archive-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .archive-link{
+    font-size: 15px;
+    color: var(--content);
+    text-decoration: none;
+    white-space: normal; 
+    word-break: break-word;
+  }
+  
+  .archive-link:hover {
+    text-decoration: none;
+    color: var(--tag-bg);
+  }
+
+
+
+/* 针对小屏幕的布局调整 */
+@media (max-width: 768px) {
+    .placeholder-container {
+        display: none; /* 隐藏整个电视机模块 */
+    }
+    #media-showcase {
+      flex-direction: column; /* 主布局改为垂直排列 */
+      align-items: center; /* 子容器水平居中 */
+    }
+  
+    .media-column-left, 
+    .media-column-right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .media-column-right {
+        margin: 8px auto;
+    }
+    .welcome-container {
+        margin-left: 0;
+    }
+    
+    
+}
+
+@media (max-width: 480px) {
+    .welcome-container {
+        margin-top: -20px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .media-column-right h2 {
+        font-size: 24px;
+    }
+    .placeholder-container {
+        display: none; /* 隐藏整个电视机模块 */
+    }
+    .archive-item {
+        font-size: 14px;
+    }
+}

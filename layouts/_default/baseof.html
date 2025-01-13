@@ -3,8 +3,6 @@
 
 <head>
     {{- partial "head.html" . }}
-     <!-- 新增相册样式 -->
-    <link rel="stylesheet" href="/css/photos.css">
 </head>
 
 <body class="
@@ -23,13 +21,6 @@
 
     {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 
-    <!-- 加载全局脚本 -->
-    <script src="/js/waterfall.min.js"></script>
-    <script src="/js/imgStatus.min.js"></script>
-    <script src="/js/view-image.js"></script>
-    <script src="/js/lately.min.js"></script>
-
-     <!-- 页面内容 -->
 
     <!-- 使用 Hugo Pipes 加载 Fancybox 的 JS 文件 -->
     {{ $fancyboxJS := resources.Get "js/fancybox.umd.min.js" | resources.Minify | resources.Fingerprint }}

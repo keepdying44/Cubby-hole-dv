@@ -63,13 +63,19 @@ body:not(.dark) #sun {
 }
 
 #menu a {
-    font-size: 17spx;
+    font-size: 17px;
     font-family:'Huiwen-mincho';
+}
+
+#menu a:hover {
+    color: var(--tag-bg);
+    transition: transform 0.3s ease;
 }
 
 #menu .active {
     font-weight: 500;
-    border-bottom: 2px solid currentColor;
+    color:var(--tag-bg);
+    font-size: 19px;
 }
 
 .lang-switch li,

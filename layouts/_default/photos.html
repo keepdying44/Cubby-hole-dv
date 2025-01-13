@@ -1,4 +1,9 @@
 {{ define "main" }}
+<head>
+  {{- partial "head.html" . }}
+  <link rel="stylesheet" href="/css/photos.css">
+</head>
+
 <main>
   <header class="page-header">
     {{ partial "breadcrumbs.html" . }}
@@ -15,9 +20,10 @@
     </h1>
   </header>
   
+
   <!-- 标签按钮列表 -->
   <div class="tag-list">
-    <button class="tag-filter" data-tag="all">All
+    <button class="tag-filter" data-tag="all">ALL
     </button>
 
     <!-- 动态生成 Tag 列表 -->
@@ -108,6 +114,7 @@
 {{ $fancyboxJS := resources.Get "js/fancybox.umd.min.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $fancyboxJS.Permalink }}"></script>
 
+<!--灯箱相关设置-->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   Fancybox.bind("[data-fancybox='gallery']", {
@@ -121,6 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+
+<!--瀑布流相关js-->
+ <script src="/js/waterfall.min.js"></script>
+ <script src="/js/imgStatus.min.js"></script>
+ <script src="/js/view-image.js"></script>
+ <script src="/js/lately.min.js"></script>
 
 {{ end }}
 

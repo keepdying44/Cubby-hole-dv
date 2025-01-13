@@ -6,10 +6,8 @@ description: "平安夜快乐！属于现pa3dv的抓马故事（或许）灵感�
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
 slug: "H.A.T.E.U" #标签页显示
-cover:
-    image: 
+mediaType: "novels"
 showToc: true
 hideMeta: false 
 showWordCount: true

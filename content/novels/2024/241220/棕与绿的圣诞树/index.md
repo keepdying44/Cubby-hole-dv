@@ -6,11 +6,8 @@ description: "5dv，或许只是个简单的、普通的圣诞节。灵感源自
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
-  
 slug: "棕与绿的圣诞树" #标签页显示
-cover:
-    image: 
+mediaType: "novels"
 showToc: true
 hideMeta: false
 showWordCount: true

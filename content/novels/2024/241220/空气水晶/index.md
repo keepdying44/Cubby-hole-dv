@@ -6,11 +6,9 @@ description: "Vergil就像溶解后留下空腔的化石。而Dante和空气一�
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
   
 slug: "空气水晶" #标签页显示
-cover:
-    image: 
+mediaType: "novels"
 showToc: true
 hideMeta: false
 showWordCount: true

@@ -10,5 +10,8 @@ typesetting: "@秦常"
 tags:
   - 汉化
 date: 2022-12-18 18:12:05
+mediaType: manga
+category: "汉化"
 showWordCount: false
+
 ---

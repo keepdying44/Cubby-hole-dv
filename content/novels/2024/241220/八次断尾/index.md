@@ -7,11 +7,9 @@ note:  全员furry注意。感谢蛇切师的协助！
 tags: 
     - 2024
     - 霜夜颂曲
-    - 小说
   
-slug: "八次维吉尔折断尾巴，最后一次他" #标签页显示
-cover:
-    image: 
+slug: "八次维吉尔折断尾巴，最后一次他" 
+mediaType: "novels"
 showToc: true
 hideMeta: false
 showWordCount: true
