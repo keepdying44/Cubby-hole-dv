@@ -22,7 +22,7 @@ body {
     gap: 20px; /* 两列之间的间距 */
     width: 100%; /* 宽度占屏幕的 90% */
     max-width: 1200px; /* 限制最大宽度 */
-    margin: 40px auto; /* 页面居中 */
+    margin: 20px auto; /* 页面居中 */
 }
 /* 父容器：两列布局 */
 .two-column-layout {
@@ -31,7 +31,7 @@ body {
     gap: 20px; /* 两列之间的间距 */
     width: 100%; /* 布局宽度为屏幕的 90% */
     max-width: 1200px; /* 限制最大宽度 */
-    margin: 40px auto; /* 页面居中 */
+    margin-top: 20px auto; /* 页面居中 */
   }
   
   /* 左侧列 */
@@ -153,7 +153,7 @@ body {
     min-width: 300px;
     width: 90%;
     background: var(--texture2) repeat; 
-    background-size: cover;
+    background-size: 100% 100%;
     padding-bottom: 30px;
     margin-top: 12px;
     margin-left: clamp(0px, 5vw, 15px); 
@@ -233,6 +233,8 @@ body {
 
     .media-column-right {
         margin: 8px auto;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
     .welcome-container {
         margin-left: 0;
