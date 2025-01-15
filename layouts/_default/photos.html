@@ -63,52 +63,102 @@
 
 <!-- 添加脚本 -->
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.tag-filter');
-    const photos = document.querySelectorAll('.gallery-photo');
-    let layoutTimeout;
-  
-    // 照片加载完成后触发瀑布流布局
-    imgStatus.watch('.photo-img', function(imgs) {
-      if (imgs.isDone()) {
-        waterfall('.gallery-photos');
-        document.querySelectorAll('.gallery-photo').forEach(photo => {
-          photo.classList.add("visible");
-        });
+ document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.tag-filter');
+  const photoContainer = document.querySelector('.gallery-photos');
+  const hiddenContainer = document.createElement('div');
+  hiddenContainer.style.display = 'none';
+  document.body.appendChild(hiddenContainer);
+
+  let layoutTimeout;
+  let originalPhotoOrder = []; // **存储原始顺序**
+
+  function getSavedTag() {
+    return localStorage.getItem('selectedTag') || 'all';
+  }
+
+  function saveTag(tag) {
+    localStorage.setItem('selectedTag', tag);
+  }
+
+  function resetWaterfall() {
+    waterfall('.gallery-photos');
+  }
+
+  // **🚀 记录初始顺序**
+  function saveOriginalOrder() {
+    originalPhotoOrder = Array.from(document.querySelectorAll('.gallery-photo'));
+  }
+
+  // **🔄 恢复原顺序**
+  function restoreOriginalOrder() {
+    originalPhotoOrder.forEach(photo => {
+      if (!photoContainer.contains(photo)) {
+        photoContainer.appendChild(photo);
       }
     });
-  
-    // 监听标签按钮点击事件
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const selectedTag = button.getAttribute('data-tag');
-  
-        // 切换按钮样式
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-  
-        // 过滤照片
-        photos.forEach(photo => {
-          const tags = photo.getAttribute('data-tags').split(' ');
-          if (selectedTag === 'all' || tags.includes(selectedTag)) {
-            photo.style.display = 'block';
-          } else {
-            photo.style.display = 'none';
-          }
-        });
-  
-        clearTimeout(layoutTimeout);
-        layoutTimeout = setTimeout(() => {
-          waterfall('.gallery-photos');
-        }, 100);
-      });
+  }
+
+  function applyFilter(tag) {
+    console.log('Applying tag:', tag);
+
+    // 切换按钮样式
+    buttons.forEach(btn => btn.classList.remove('active'));
+    const activeButton = document.querySelector(`.tag-filter[data-tag="${tag}"]`);
+    if (activeButton) {
+      activeButton.classList.add('active');
+    }
+
+    const allPhotos = Array.from(document.querySelectorAll('.gallery-photo'));
+
+    // **1️⃣ 隐藏未选中的图片**
+    allPhotos.forEach(photo => {
+      const tags = photo.getAttribute('data-tags').trim().split(/\s+/);
+      if (tag === 'all' || tags.includes(tag)) {
+        photo.style.display = 'block';
+        photo.classList.add('visible');
+      } else {
+        photo.classList.remove('visible');
+        photo.style.display = 'none';
+        hiddenContainer.appendChild(photo);
+      }
     });
-  
-    // 默认触发 "全部" 按钮
-    const allButton = document.querySelector('.tag-filter[data-tag="all"]');
-    if (allButton) allButton.click();
+
+    // **2️⃣ 恢复原始顺序**
+    restoreOriginalOrder();
+
+    // **3️⃣ 重新计算瀑布流布局**
+    clearTimeout(layoutTimeout);
+    layoutTimeout = setTimeout(() => {
+      console.log("Resetting waterfall layout...");
+      resetWaterfall();
+    }, 100);
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedTag = button.getAttribute('data-tag');
+      console.log('Selected tag:', selectedTag);
+
+      saveTag(selectedTag);
+      applyFilter(selectedTag);
+    });
   });
+
+  // **页面加载时保存原顺序**
+  saveOriginalOrder();
+
+  // **页面加载时恢复上次选中的 `tag`**
+  const lastSelectedTag = getSavedTag();
+  applyFilter(lastSelectedTag);
+
+  // **确保 `waterfall.js` 重新计算布局**
+  setTimeout(() => {
+    waterfall('.gallery-photos');
+  }, 200);
+});
   </script>
+
 
   <!-- 使用 Hugo Pipes 加载 Fancybox 的 JS 文件 -->
 {{ $fancyboxJS := resources.Get "js/fancybox.umd.min.js" | resources.Minify | resources.Fingerprint }}

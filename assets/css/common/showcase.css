@@ -155,7 +155,7 @@ body {
     background: var(--texture2) repeat; 
     background-size: 100% 100%;
     padding-bottom: 30px;
-    margin-top: 12px;
+    margin-top: 2px;
     margin-left: clamp(0px, 5vw, 15px); 
   }
   
