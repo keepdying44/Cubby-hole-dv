@@ -1,0 +1,52 @@
+/* 父容器样式 */
+/* 链接部分的外部容器 */
+.link-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 木板层容器样式 */
+.wooden-board-layer {
+  background: var(--texture) repeat,var(--secondary);
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* 纸张层容器样式 */
+.paper-layer {
+  background:  url('/images/textures/texture4.png') repeat, var(--entry);
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* 纸张中的标题样式 */
+.paper-layer h2 {
+  font-size: 24px;
+  margin: 10px ;
+}
+
+/* 列表项和链接样式 */
+.paper-layer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.paper-layer ul li {
+  margin: 5px 0;
+}
+
+.paper-layer ul li a {
+  text-decoration: none;
+  color: var(--content);
+  font-size: 16px;
+  padding: 30px;
+}
+
+.paper-layer ul li a:hover {
+  color: var(--tag-bg);
+}

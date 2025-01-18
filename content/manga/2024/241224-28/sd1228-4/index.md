@@ -5,8 +5,8 @@ author: weibo@朗姆泡派
 resources:
   - src: "**.jpg"
 tags:
-  - 原稿
+  - 漫画
 mediaType: manga
-category: "原稿"
+category: "漫画"
 showWordCount: false
 ---

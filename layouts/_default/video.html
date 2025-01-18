@@ -1,0 +1,138 @@
+{{ define "main" }}
+<head>
+  {{- partial "head.html" . }}
+  <link rel="stylesheet" href="/css/video.css">
+</head>
+
+<header class="page-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="title-with-rss">
+      {{ .Title }}
+      <a href="/photos/index.xml" title="RSS" aria-label="RSS" class="rss-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" height="23">
+          <path d="M4 11a9 9 0 0 1 9 9" />
+          <path d="M4 4a16 16 0 0 1 16 16" />
+          <circle cx="5" cy="19" r="1" />
+        </svg>
+      </a>
+    </h1>
+</header>
+
+<body>
+    <div class="video-page">
+        <!-- 录像带框 -->
+          <!-- 视频封面和标题部分 -->
+        <div class="video-container">
+            <!-- 视频标题部分 -->
+            <div class="title-section">
+                <h1 id="video-title">这是视频标题 1</h1>
+            </div>
+
+        <div class="videotape-frame">
+            <img src="/images/tape.png" alt="Videotape Frame" class="frame-img">
+            <!-- 视频封面链接 -->
+            <a href="#" target="_blank" id="thumbnail-link" class="video-thumbnail">
+                <img src="/photos/cover/cover1.JPG" alt="Video Thumbnail" class="thumbnail-img" id="thumbnail-img">
+            </a>
+    </div>
+    
+        <!-- 左右箭头导航 -->
+    <div class="navigation">
+            <button id="prev" class="nav-button">«&nbsp;Prev</button>
+            <button id="next" class="nav-button">Next&nbsp;»</button>
+        </div>
+    </div>
+   
+    <script>
+        window.onload = function () {
+            // 获取 DOM 元素
+            const thumbnailLink = document.querySelector("#thumbnail-link");
+            console.log("thumbnailLink:", thumbnailLink);  // 确认元素是否成功获取
+    
+            if (!thumbnailLink) {
+                console.error("无法找到 #thumbnail-link 元素");
+                return;
+            }
+    
+            const thumbnailImg = document.querySelector(".thumbnail-img");
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+    
+            // 检查元素是否成功获取
+            if (!thumbnailImg || !prevButton || !nextButton || !thumbnailLink) {
+                console.error("无法获取元素，请检查 HTML 结构");
+                return;
+            }
+    
+            // 初始化变量
+            let thumbnails = [];
+            let links = [];
+            let titles = [];
+            let currentIndex = 0;
+    
+            // 通过 fetch 获取 JSON 数据
+            fetch('/js/videos.json')  
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('网络响应失败，状态码：' + response.status);
+                }
+                return response.json();
+             })
+            .then(data => {
+        // 解析 JSON 数据并更新变量
+             data.forEach(video => {
+                titles.push(video.title);           // 视频标题
+                thumbnails.push(video.thumbnail);   // 视频封面
+                links.push(video.link);             // 视频链接
+            });
+
+        // 更新页面内容
+            updateThumbnail(currentIndex);
+        })
+        .catch(error => {
+            console.error('加载视频数据失败:', error); // 捕获错误并打印
+        });
+    
+            // 更新封面图片和标题
+            function updateThumbnail(index) {
+                if (thumbnails[index]) {
+                    thumbnailImg.src = thumbnails[index];
+                    thumbnailLink.href = links[index];  // 更新链接
+                    document.getElementById("video-title").textContent = titles[index]; // 更新标题
+                    console.log("更新的链接是：", thumbnailLink.href);  // 打印链接，确保它是有效的
+                } else {
+                    console.error(`图片路径无效: ${thumbnails[index]}`);
+                }
+    
+                // 检查目标元素是否存在并滚动
+                const targetElement = document.querySelector("#thumbnail-link");
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" }); // 平滑滚动到目标元素
+                } else {
+                    console.error("目标元素不存在，无法滚动");
+                }
+            }
+    
+            // 点击链接时打开新页面
+            thumbnailLink.addEventListener("click", (e) => {
+                e.preventDefault(); // 阻止默认跳转
+                window.open(thumbnailLink.href, '_blank'); // 在新标签页中打开链接
+            });
+    
+            // 左按钮：切换到上一张图片
+            prevButton.addEventListener("click", () => {
+                currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+                updateThumbnail(currentIndex);
+            });
+    
+            // 右按钮：切换到下一张图片
+            nextButton.addEventListener("click", () => {
+                currentIndex = (currentIndex + 1) % thumbnails.length;
+                updateThumbnail(currentIndex);
+            });
+        };
+    </script>
+</body>
+
+{{ end }}

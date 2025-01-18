@@ -51,9 +51,12 @@ languages:
               - name: 插画
                 url: photos
                 weight: 4
+              - name: 视频
+                url: video/
+                weight: 5
               - name: 搜索
                 url: search/
-                weight: 5
+                weight: 6
             
 
                            

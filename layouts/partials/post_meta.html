@@ -37,8 +37,18 @@
         </span>
     </span>
 
+     <!--图源-->
+     <span id="post_meta_style_4">
+        {{- if .Params.source }}
+         <span>
+        图源: {{ .Params.source }}
+        &ensp;
+        {{- end }}
+         </span>
+    </span>
+
    <!--翻译-->
-    <span id="post_meta_style_4">
+    <span id="post_meta_style_5">
         {{- if .Params.translation }}
         <span>
          翻译: {{ .Params.translation }}
@@ -48,7 +58,7 @@
     </span>
 
     <!--嵌字-->
-    <span id="post_meta_style_5">
+    <span id="post_meta_style_6">
         {{- if .Params.typesetting }}
          <span>
         嵌字: {{ .Params.typesetting }}
@@ -57,8 +67,10 @@
          </span>
     </span>
 
+   
+
     <!-- 标签 -->
-    <span id="post_meta_style_6">
+    <span id="post_meta_style_">
         <span>
             {{- if .Params.tags }}
             <span class="post-tags-meta">

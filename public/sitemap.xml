@@ -3,19 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-01-11T01:43:36+00:00</lastmod>
+    <lastmod>2025-01-15T20:10:15+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/manga/</loc>
-    <lastmod>2025-01-11T01:43:36+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/sample/</loc>
-    <lastmod>2025-01-11T01:43:36+00:00</lastmod>
+    <lastmod>2025-01-15T20:10:15+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-01-11T01:43:36+00:00</lastmod>
+    <lastmod>2025-01-15T20:10:15+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%B1%89%E5%8C%96/</loc>
-    <lastmod>2025-01-11T01:43:36+00:00</lastmod>
+    <lastmod>2025-01-15T20:10:15+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/manga/translation/%E4%BB%8A%E5%A4%A9%E5%BC%80%E5%A7%8B%E5%B9%B2%E5%A5%B3%E4%BB%86/</loc>
+    <lastmod>2025-01-15T20:10:15+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/2024/</loc>
     <lastmod>2024-12-31T01:00:00+00:00</lastmod>
@@ -148,5 +148,7 @@
     <loc>http://localhost:1313/novel/</loc>
   </url><url>
     <loc>http://localhost:1313/series/</loc>
+  </url><url>
+    <loc>http://localhost:1313/video/</loc>
   </url>
 </urlset>

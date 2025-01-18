@@ -10,13 +10,13 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 11 Jan 2025 01:43:36 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jan 2025 20:10:15 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>sample</title>
-      <link>http://localhost:1313/manga/translation/sample/</link>
-      <pubDate>Sat, 11 Jan 2025 01:43:36 +0000</pubDate>
+      <title>今天开始干女仆</title>
+      <link>http://localhost:1313/manga/translation/%E4%BB%8A%E5%A4%A9%E5%BC%80%E5%A7%8B%E5%B9%B2%E5%A5%B3%E4%BB%86/</link>
+      <pubDate>Wed, 15 Jan 2025 20:10:15 +0000</pubDate>
       
-      <guid>http://localhost:1313/manga/translation/sample/</guid>
+      <guid>http://localhost:1313/manga/translation/%E4%BB%8A%E5%A4%A9%E5%BC%80%E5%A7%8B%E5%B9%B2%E5%A5%B3%E4%BB%86/</guid>
       <description></description>
     </item>
     
@@ -344,6 +344,15 @@
       
       <guid>http://localhost:1313/novel/</guid>
       <description>novel</description>
+    </item>
+    
+    <item>
+      <title>Video</title>
+      <link>http://localhost:1313/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/video/</guid>
+      <description>video</description>
     </item>
     
   </channel>

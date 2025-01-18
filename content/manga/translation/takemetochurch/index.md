@@ -5,8 +5,9 @@ layout: "single"
 resources:
   - src: "**.jpg"
 author: モスマン
-translation: "@秦常"
-typesetting: "@秦常"
+source: "@Qc"
+translation: "@路过的匿名"
+typesetting: "@Qc"
 tags:
   - 汉化
 date: 2019-10-19 18:11:11

@@ -22,28 +22,42 @@
         </header>
 
 
-        <div class="link-section">
-            <!-- 友链部分 -->
-            <div class="link-container">
-              <h2>创作者门牌号</h2>
-              <ul>
-                <li><a href="https://parfaitlovermisaka.github.io/2024/12/28/dvplog241228/" target="_blank">24剩蛋 · 1228 1:00</a></li>
-                <li><a href="https://example2.com" target="_blank">友链2</a></li>
-                <li><a href="https://example3.com" target="_blank">友链3</a></li>
-              </ul>
-            </div>
-          
-            <!-- 视频链接部分 -->
-            <div class="link-container">
-              <h2>视频</h2>
-              <ul>
-                <li><a href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.337.search-card.all.click" target="_blank">视频1</a></li>
-                <li><a href="https://example2.com" target="_blank">视频2</a></li>
-                <li><a href="https://example3.com" target="_blank">视频3</a></li>
-              </ul>
-            </div>
+        <div class="link-section" id="creator-container">
+          <!-- 木板层容器 -->
+          <div class="wooden-board-layer">
+              <!-- 纸张层容器 -->
+              <div class="paper-layer">
+                  <h2>创作者门牌号</h2>
+                  <ul id="creator-links">
+                      <!-- 动态生成的创作者链接将在这里插入 -->
+                  </ul>
+              </div>
           </div>
-
+      </div>
+      
+      <script>
+          // 加载 creators.json 文件
+          fetch('/js/creators.json')
+              .then(response => response.json())
+              .then(data => {
+                  // 获取创作者信息
+                  const creators = data.creators;
+                  let creatorContent = '';
+      
+                  creators.forEach(creator => {
+                      creatorContent += `
+                          ${creator.links.map(link => `
+                              <a href="${link.url}" target="_blank">${link.text}</a>
+                          `).join('')}
+                      `;
+                  });
+      
+                  // 插入内容到页面中的指定容器
+                  document.getElementById('creator-links').innerHTML = creatorContent;
+              })
+              .catch(error => {
+                  console.error('加载创作者信息失败:', error);
+              });
+      </script>
 </body>
-</html>
 {{ end }}
