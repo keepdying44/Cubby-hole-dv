@@ -93,11 +93,11 @@ body {
 
 .welcome-link .highlight {
     color: var(--tag-bg); 
-    font-weight: bold;
+    font-weight: normal;
 }
 .welcome-link .highlight:hover {
     color: var(--tag-bg2); 
-    font-weight: bold;
+    font-weight: normal;
 }
 
   /* 空白展示框 */
