@@ -97,6 +97,7 @@ body {
 }
 .welcome-link .highlight:hover {
     color: var(--tag-bg2); 
+    font-weight: bold;
 }
 
   /* 空白展示框 */
