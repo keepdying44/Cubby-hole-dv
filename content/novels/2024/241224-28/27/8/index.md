@@ -2,7 +2,7 @@
 title: "临终关怀" #标题
 date: 2024-12-27 08:00:00
 author: "杨茶七" #作者
-description: 圣不会送感冒药的死神先生不是好哥哥。
+description: 不会送感冒药的死神先生不是好哥哥。
 note:
 tags: 
     - 2024
