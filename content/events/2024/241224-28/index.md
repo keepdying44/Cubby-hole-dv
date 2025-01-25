@@ -18,4 +18,4 @@ ShowBreadCrumbs: true
 【活动汇总微博链接】[点击前往](http://m.weibo.cn/status/5116892745044211?)
 <br>
 <br>
-{{<figure src="241224-28.webp#center" caption="DV圣诞节之不要剩蛋一个宣图" width="500">}}
+{{<figure src="241224-28.webp#center" caption="DV圣诞节之不要剩蛋一个名单" width="500">}}
