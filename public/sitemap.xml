@@ -116,6 +116,9 @@
     <loc>http://localhost:1313/novels/2024/241224-28/26/%E9%87%8D%E8%BF%94%E6%9B%BC%E5%BE%B7%E9%9B%B7/</loc>
     <lastmod>2024-12-26T06:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/novels/2024/241224-28/26/%E6%83%8A%E5%96%9C%E6%98%AF%E5%90%A6%E9%83%BD%E4%BB%A5%E6%83%8A%E5%90%93%E4%B8%BA%E5%89%8D%E6%8F%90/</loc>
+    <lastmod>2024-12-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/novels/2024/241224-28/25/%E9%80%86%E8%A1%8C%E7%9A%84%E4%BA%BA/</loc>
     <lastmod>2024-12-25T21:00:00+00:00</lastmod>
   </url><url>
@@ -162,7 +165,16 @@
     <lastmod>2024-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/24%E4%B8%87%E5%9C%A3/</loc>
-    <lastmod>2024-10-31T20:00:00+00:00</lastmod>
+    <lastmod>2024-11-01T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/novels/2024/241031/01/%E9%80%90%E6%97%A5/</loc>
+    <lastmod>2024-11-01T22:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/novels/2024/241031/01/leclisse-luna/</loc>
+    <lastmod>2024-11-01T02:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/novels/2024/241031/01/leclissesol/</loc>
+    <lastmod>2024-11-01T01:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/events/2024/dv%E4%B8%87%E5%9C%A3%E4%BC%81%E5%88%92%E4%B9%8B%E8%AF%B7%E5%93%A5%E5%9B%9E%E9%AD%82/</loc>
     <lastmod>2024-10-31T20:00:00+00:00</lastmod>
@@ -174,6 +186,9 @@
     <lastmod>2024-10-31T20:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/manga/2024/241031/1031-16/</loc>
+    <lastmod>2024-10-31T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/novels/2024/241031/01/%E4%B8%87%E5%9C%A3%E8%8A%82%E5%BF%AB%E4%B9%90/</loc>
     <lastmod>2024-10-31T16:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/novels/2024/241031/31/%E4%BB%96%E8%82%AF%E5%AE%9A%E5%AF%B9%E6%88%91%E6%9C%89%E6%84%8F%E6%80%9D/</loc>
