@@ -336,6 +336,15 @@
     </item>
     
     <item>
+      <title>逐日</title>
+      <link>http://localhost:1313/novels/2024/241031/01/%E9%80%90%E6%97%A5/</link>
+      <pubDate>Fri, 01 Nov 2024 22:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/novels/2024/241031/01/%E9%80%90%E6%97%A5/</guid>
+      <description>在关押Vergil灵魂的幻境中，Mundus为他打造了一位永远不会被击败的幻象，那个幻象是Dante。</description>
+    </item>
+    
+    <item>
       <title>L&#39;eclisse · Luna</title>
       <link>http://localhost:1313/novels/2024/241031/01/leclisse-luna/</link>
       <pubDate>Fri, 01 Nov 2024 02:00:00 +0000</pubDate>
@@ -396,15 +405,6 @@
       
       <guid>http://localhost:1313/novels/2024/241031/31/%E4%B8%87%E5%9C%A3%E8%8A%82%E5%BF%AB%E4%B9%90/</guid>
       <description>2d5v，起名废文不对题的一篇，实际上是并没有万圣节也没有很快乐的流水账</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/novels/2024/241031/01/8/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/novels/2024/241031/01/8/</guid>
-      <description></description>
     </item>
     
   </channel>
