@@ -4,7 +4,7 @@ type: "manga"
 layout: "single"
 resources:
   - src: "**.jpg"
-author: Folgore
+author: tommy
 translation: "@马拉桑喝酒醉"
 typesetting: "@马拉桑喝酒醉"
 tags:
