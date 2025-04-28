@@ -2,29 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/2025/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/manga/translation/dance-on-my-gravetommy/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <loc>http://localhost:1313/tags/dmc-dv-only-2.0/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/manga/translation/dance-on-my-grave%E7%9C%BC%E5%B8%A6/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <loc>http://localhost:1313/events/2025/dvo-2.0/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/manga/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <loc>http://localhost:1313/events/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E6%B1%89%E5%8C%96/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <loc>http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/manga/translation/%E7%89%87%E5%B1%B1%E6%84%81%E9%9B%86%E5%90%88/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <loc>http://localhost:1313/events/2025/dv%E6%83%85%E4%BA%BA%E8%8A%82%E4%BC%81%E5%88%92-%E9%A3%8E%E9%9B%AA%E5%BD%92%E9%80%94/</loc>
+    <lastmod>2025-02-14T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/manga/translation/%E7%89%87%E5%B1%B1%E6%84%81%E7%89%B9%E8%BE%91%E5%B0%8F%E8%B1%86%E4%B8%81%E5%93%A5%E5%93%A5/</loc>
-    <lastmod>2025-04-03T20:10:15+00:00</lastmod>
+    <loc>http://localhost:1313/tags/%E6%83%85%E4%BA%BA%E8%8A%82/</loc>
+    <lastmod>2025-02-14T20:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/2024/</loc>
     <lastmod>2024-12-31T01:00:00+00:00</lastmod>
@@ -76,6 +79,9 @@
   </url><url>
     <loc>http://localhost:1313/novels/2024/241220/damp-past/</loc>
     <lastmod>2024-12-27T15:15:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/manga/</loc>
+    <lastmod>2024-12-27T15:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/manga/2024/241224-28/sd1228-4/</loc>
     <lastmod>2024-12-27T15:00:00+00:00</lastmod>
@@ -164,12 +170,6 @@
     <loc>http://localhost:1313/events/2024/dv%E5%9C%A3%E8%AF%9E%E8%8A%82%E4%B9%8B%E4%B8%8D%E8%A6%81%E5%89%A9%E8%9B%8B%E4%B8%80%E4%B8%AA/</loc>
     <lastmod>2024-12-22T20:05:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/events/</loc>
-    <lastmod>2024-12-22T20:05:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/%E6%B4%BB%E5%8A%A8/</loc>
-    <lastmod>2024-12-22T20:05:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/events/2024/%E9%9C%9C%E5%A4%9C%E9%A2%82%E6%9B%B2/</loc>
     <lastmod>2024-12-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -214,48 +214,6 @@
   </url><url>
     <loc>http://localhost:1313/novels/2024/241031/31/%E4%B8%87%E5%9C%A3%E8%8A%82%E5%BF%AB%E4%B9%90/</loc>
     <lastmod>2024-10-31T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/love-song/</loc>
-    <lastmod>2024-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/uma/</loc>
-    <lastmod>2022-12-18T18:12:05+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/takemetochurch/</loc>
-    <lastmod>2019-10-19T18:11:11+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/%E8%B5%A4%E3%81%AE%E4%BB%96%E4%BA%BA%E3%81%A0%E3%81%A3%E3%81%9F%E3%82%89%E3%81%A9%E3%82%8C%E3%81%BB%E3%81%A9/</loc>
-    <lastmod>2019-10-14T20:10:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/likeadream/</loc>
-    <lastmod>2019-08-25T18:09:49+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/bymyside/</loc>
-    <lastmod>2013-10-27T18:08:01+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/%E4%BB%8A%E5%A4%A9%E5%BC%80%E5%A7%8B%E5%B9%B2%E5%A5%B3%E4%BB%86/</loc>
-    <lastmod>2013-05-03T20:10:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/cat-food/</loc>
-    <lastmod>2011-12-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/canon4/</loc>
-    <lastmod>2009-12-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/canon3/</loc>
-    <lastmod>2009-08-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/another-rose/</loc>
-    <lastmod>2008-08-16T18:08:01+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/canon1/</loc>
-    <lastmod>2008-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/royalguard2/</loc>
-    <lastmod>2005-01-06T14:37:47+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/manga/translation/royalguard1/</loc>
-    <lastmod>2005-01-06T14:37:47+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
